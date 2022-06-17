@@ -1,0 +1,83 @@
+/* banner-black */
+.banner-black { 
+  min-height: 500px;
+  padding: 50px;
+  background: #212629;
+  border-radius: 80px 80px 80px 5px;
+  position: relative;
+  transition: 0.3s;
+  &__content {
+    max-width: 580px;
+    position: relative;
+    z-index: 2;
+  }
+  &__title {
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 62px;
+    color: #fff;
+    margin-bottom: 35px;
+  }
+  &__btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    padding: 10px 10px 10px 30px;
+    background: #212629;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5), -1px -1px 6px rgba(255, 255, 255, 0.05), -5px -5px 20px rgba(255, 255, 255, 0.1), 5px 5px 20px rgba(0, 0, 0, 0.8);
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 20px;
+    color: $orange;
+    text-align: center;
+    svg {
+      margin-left: 18px;
+      flex-shrink: 0;
+    }
+    &:hover {
+      box-shadow: 0 0 15px rgba(255,255,255,.2);
+    }
+  }
+  &__img {
+    width: 52%;
+    position: absolute;
+    bottom: -90px;
+    right: 0;
+  }
+  @media (max-width: $break_sm) {
+    min-height: 400px;
+    &__content {
+      max-width: 350px;
+    }
+    &__title {
+      font-size: 30px;
+      line-height: 35px;
+    }
+    &__img {
+      bottom: -50px;
+    }
+  }
+  @media (max-width: $break_xs) {
+    min-height: 230px;
+    padding: 30px;
+    border-radius: 40px 40px 40px 5px;
+    &__content {
+      max-width: 235px;
+    }
+    &__title {
+      font-size: 20px;
+      line-height: 25px;
+    }
+    &__btn {
+      display: none;
+    }
+    &__img {
+      width: 185px;
+      right: 20px;
+      bottom: -30px;
+    }
+  }
+}
+/* /banner-black */

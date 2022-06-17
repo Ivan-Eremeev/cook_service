@@ -1,0 +1,44 @@
+/* btn */
+.btn { 
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  padding: 10px 30px;
+  border-radius: 30px;
+  border: none;
+  outline: none;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20px;
+  cursor: pointer;
+  user-select: none;
+  text-align: center;
+  img, svg {
+    width: 21px;
+    margin-right: 10px;
+    flex-shrink: 0;
+  }
+  &--green {
+    background-color: $green;
+    color: #fff;
+    svg {
+      fill: #fff;
+    }
+    &:hover {
+      background-color: #3FED80;
+    }
+  }
+  &--black {
+    color: $text;
+    background-color: $gray;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.08), -1px -1px 6px rgba(255, 255, 255, 0.5), -5px -5px 20px #FFFFFF, 5px 5px 20px #D3D3D3;
+    &:hover {
+      background-color: #fff;
+    }
+  }
+  &:hover {
+    box-shadow: 0 0 10px rgba(0,0,0,.2);
+  }
+}
+/* /btn */

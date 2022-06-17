@@ -1,0 +1,49 @@
+/* header */
+.header { 
+  padding: 38px 0 68px;
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__burger {
+    display: none;
+  }
+  &__logo {
+
+  }
+  &__bar {
+    display: flex;
+    align-items: center;
+    margin-left: -20px;
+    > * {
+      margin-left: 20px;
+    }
+  }
+  &__user {
+
+  }
+  &__user-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background-color: $gray;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.08), -1px -1px 6px rgba(255, 255, 255, 0.5), -5px -5px 20px #FFFFFF, 5px 5px 20px #D3D3D3;
+    border-radius: 100%;
+    cursor: pointer;
+    user-select: none;
+    transition: 0.3s;
+    &:hover {
+      &:hover {
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+      }
+    }
+  }
+  &__user-menu {
+    
+  }
+}
+/* /header */
