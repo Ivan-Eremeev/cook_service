@@ -950,6 +950,16 @@ svg {
 .catalog__col {
   width: 33.3333333333%;
 }
+@media screen and (max-width: 1050px) {
+  .catalog__col {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .catalog__col {
+    width: 100%;
+  }
+}
 .catalog__col:nth-child(1n) .card__img {
   background-color: #FE724B;
 }
@@ -1071,6 +1081,8 @@ svg {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
   width: 120px;
   height: 40px;
   border: 1px solid #fff;

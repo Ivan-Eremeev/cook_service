@@ -74,6 +74,7 @@
   }
   &__counter {
     display: flex;
+    flex-shrink: 0;
     width: 120px;
     height: 40px;
     border: 1px solid #fff;

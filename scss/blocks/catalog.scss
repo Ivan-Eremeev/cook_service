@@ -9,6 +9,8 @@
   }
   &__col {
     @include col(4);
+    @include col-md(6);
+    @include col-sm(12);
     &:nth-child(1n) {
       .card__img {
         background-color: #FE724B;
