@@ -1,68 +1,68 @@
 /* banner-orange */
 .banner-orange { 
   min-height: 500px;
-    padding: 50px;
-    background: $orange;
-    border-radius: 80px 80px 80px 5px;
+  padding: 50px;
+  background: $orange;
+  border-radius: 80px 80px 80px 5px;
+  position: relative;
+  transition: 0.3s;
+  &__content {
+    max-width: 580px;
     position: relative;
-    transition: 0.3s;
+    z-index: 2;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 62px;
+    color: #fff;
+    margin-bottom: 35px;
+  }
+
+  &__img {
+    width: 52%;
+    position: absolute;
+    bottom: -90px;
+    right: 0;
+  }
+
+  @media (max-width: $break_sm) {
+    min-height: 400px;
+
     &__content {
-      max-width: 580px;
-      position: relative;
-      z-index: 2;
+      max-width: 350px;
     }
-  
+
     &__title {
-      font-weight: 700;
-      font-size: 50px;
-      line-height: 62px;
-      color: #fff;
-      margin-bottom: 35px;
+      font-size: 30px;
+      line-height: 35px;
     }
-  
+
     &__img {
-      width: 52%;
-      position: absolute;
-      bottom: -90px;
-      right: 0;
+      bottom: -50px;
     }
-  
-    @media (max-width: $break_sm) {
-      min-height: 400px;
-  
-      &__content {
-        max-width: 350px;
-      }
-  
-      &__title {
-        font-size: 30px;
-        line-height: 35px;
-      }
-  
-      &__img {
-        bottom: -50px;
-      }
+  }
+
+  @media (max-width: $break_xs) {
+    min-height: 230px;
+    padding: 30px;
+    border-radius: 40px 40px 40px 5px;
+
+    &__content {
+      max-width: 235px;
     }
-  
-    @media (max-width: $break_xs) {
-      min-height: 230px;
-      padding: 30px;
-      border-radius: 40px 40px 40px 5px;
-  
-      &__content {
-        max-width: 235px;
-      }
-  
-      &__title {
-        font-size: 20px;
-        line-height: 25px;
-      }
-  
-      &__img {
-        width: 185px;
-        right: 20px;
-        bottom: -30px;
-      }
+
+    &__title {
+      font-size: 20px;
+      line-height: 25px;
     }
+
+    &__img {
+      width: 185px;
+      right: 20px;
+      bottom: -30px;
+    }
+  }
 }
 /* /banner-orange */

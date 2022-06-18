@@ -1,6 +1,7 @@
 /* slider */
 .slider { 
   overflow: hidden;
+  padding-top: 20px;
   padding-bottom: 120px;
   &__slider {
     position: relative;
@@ -9,7 +10,7 @@
     display: flex;
     align-items: center;
     width: auto !important;
-    left: 53px !important;
+    left: 43px !important;
     bottom: 52px !important;
     .swiper-pagination-bullet {
       width: 10px;
@@ -36,9 +37,9 @@
       box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.05), 40px 40px 50px rgba(0, 0, 0, 0.5);
     }
   }
-  @media (max-width: $break_lg) {
-    &__slider {
-      padding-right: 100px;
+  @media (max-width: $break_xs) {
+    &__pagination {
+      display: none;
     }
   }
 }

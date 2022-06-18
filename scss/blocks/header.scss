@@ -1,6 +1,6 @@
 /* header */
 .header { 
-  padding: 38px 0 68px;
+  padding: 38px 0 48px;
   .wrapper {
     display: flex;
     justify-content: space-between;
@@ -44,6 +44,20 @@
   }
   &__user-menu {
     
+  }
+  @media (max-width: $break_sm) {
+    padding: 40px 0 16px;
+    &__burger {
+      display: block;
+    }
+    &__bar {
+      .btn {
+        display: none;
+      }
+    }
+    &__user-icon {
+      box-shadow: none;
+    }
   }
 }
 /* /header */
