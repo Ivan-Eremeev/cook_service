@@ -46,4 +46,14 @@ $(document).ready(function () {
   }
   counter('.js-counter');
 
+  // Кнопка цены в карточке товара
+	function clickToggle(block) {
+		if (block.length) {
+			block.on('click', function () {
+				$(this).addClass('active');
+			});
+		}
+	}
+	clickToggle($('.js-click'));
+
 });

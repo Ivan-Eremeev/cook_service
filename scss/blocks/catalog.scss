@@ -10,7 +10,7 @@
   &__col {
     @include col(4);
     @include col-md(6);
-    @include col-sm(12);
+    @include col-xs(12);
     &:nth-child(1n) {
       .card__img {
         background-color: #FE724B;
@@ -39,6 +39,17 @@
     &:nth-child(6n) {
       .card__img {
         background-color: #FE724B;
+      }
+    }
+  }
+  @media (max-width: $break_xs) {
+    &__title {
+      display: none;
+    }
+    .row {
+      margin-top: 20px;
+      > * {
+        padding-top: 20px;
       }
     }
   }
