@@ -485,7 +485,7 @@ svg {
   -o-transition: 0.3s;
   transition: 0.3s;
 }
-.header__user-icon:hover:hover {
+.header__user-icon:hover {
   background-color: #fff;
   -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
@@ -832,3 +832,46 @@ svg {
 }
 
 /* /banner-white */
+/* filter */
+.filter__links {
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 20px;
+  margin-bottom: 40px;
+}
+.filter__link {
+  display: inline-block;
+  margin-right: 40px;
+  color: #212629;
+  opacity: 0.6;
+}
+.filter__link:hover:not(.active) {
+  color: #FE9102;
+  opacity: 1;
+}
+.filter__link.active {
+  opacity: 1;
+  cursor: default;
+}
+.filter__category {
+  display: inline-block;
+  padding: 9px 20px;
+  margin-right: 10px;
+  background-color: #E9E9E9;
+  -webkit-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.08), -1px -1px 6px rgba(255, 255, 255, 0.5), -5px -5px 20px #FFFFFF, 5px 5px 20px #D3D3D3;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.08), -1px -1px 6px rgba(255, 255, 255, 0.5), -5px -5px 20px #FFFFFF, 5px 5px 20px #D3D3D3;
+  border-radius: 20px;
+  color: #212629;
+}
+.filter__category:hover:not(.active) {
+  background-color: #fff;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.filter__category.active {
+  -webkit-box-shadow: inset -1px -1px 3px rgba(255, 255, 255, 0.8), inset -6px -6px 5px rgba(255, 255, 255, 0.3), inset 1px 1px 3px rgba(0, 0, 0, 0.15), inset 6px 6px 5px rgba(0, 0, 0, 0.06);
+  box-shadow: inset -1px -1px 3px rgba(255, 255, 255, 0.8), inset -6px -6px 5px rgba(255, 255, 255, 0.3), inset 1px 1px 3px rgba(0, 0, 0, 0.15), inset 6px 6px 5px rgba(0, 0, 0, 0.06);
+  cursor: default;
+}
+
+/* /filter */

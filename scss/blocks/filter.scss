@@ -1,0 +1,44 @@
+/* filter */
+.filter { 
+  &__links {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 20px;
+    margin-bottom: 40px;
+  }
+  &__link {
+    display: inline-block;
+    margin-right: 40px;
+    color: $text;
+    opacity: 0.6;
+    &:hover:not(.active) {
+      color: $orange;
+      opacity: 1;
+    }
+    &.active {
+      opacity: 1;
+      cursor: default;
+    }
+  }
+  &__categories {
+    
+  }
+  &__category {
+    display: inline-block;
+    padding: 9px 20px;
+    margin-right: 10px;
+    background-color: $gray;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.08), -1px -1px 6px rgba(255, 255, 255, 0.5), -5px -5px 20px #FFFFFF, 5px 5px 20px #D3D3D3;
+    border-radius: 20px;
+    color: $text;
+    &:hover:not(.active) {
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    }
+    &.active {
+      box-shadow: inset -1px -1px 3px rgba(255, 255, 255, 0.8), inset -6px -6px 5px rgba(255, 255, 255, 0.3), inset 1px 1px 3px rgba(0, 0, 0, 0.15), inset 6px 6px 5px rgba(0, 0, 0, 0.06);
+      cursor: default;
+    }
+  }
+}
+/* /filter */

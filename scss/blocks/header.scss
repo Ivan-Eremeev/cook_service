@@ -36,10 +36,8 @@
     user-select: none;
     transition: 0.3s;
     &:hover {
-      &:hover {
-        background-color: #fff;
-        box-shadow: 0 0 10px rgba(0, 0, 0, .2);
-      }
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, .2);
     }
   }
   &__user-menu {
