@@ -11,6 +11,7 @@
   font-weight: 700;
   font-size: 18px;
   line-height: 20px;
+  transition: 0.3s;
   cursor: pointer;
   user-select: none;
   text-align: center;
@@ -33,6 +34,14 @@
     color: $text;
     background-color: $gray;
     box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.08), -1px -1px 6px rgba(255, 255, 255, 0.5), -5px -5px 20px #FFFFFF, 5px 5px 20px #D3D3D3;
+    &:hover {
+      background-color: #fff;
+    }
+  }
+  &--orange {
+    background-color: $gray;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.08), -1px -1px 6px rgba(255, 255, 255, 0.5), -5px -5px 20px #FFFFFF, 5px 5px 20px #D3D3D3;
+    color: $orange;
     &:hover {
       background-color: #fff;
     }

@@ -5,6 +5,8 @@ block title
 
 block content
 
+  include blocks/card.pug
+
   .page 
 
     include core/header.pug
@@ -54,10 +56,10 @@ block content
       .filter
         .wrapper
           .filter__links
-            a(href="#").filter__link.active Частным клиентам
+            span.filter__link.active Частным клиентам
             a(href="#").filter__link Корпоративные заказы
           .filter__categories 
-            a(href="#").filter__category.active Любимое
+            span.filter__category.active Любимое
             a(href="#").filter__category Закуски
             a(href="#").filter__category Салаты
             a(href="#").filter__category Горячее
@@ -67,5 +69,24 @@ block content
             a(href="#").filter__category Десерты
             a(href="#").filter__category Напитки
       //	/filter
+
+      // catalog
+      .catalog
+        .wrapper 
+          .catalog__title Закуски
+          .row.gy
+            .catalog__col 
+              +card('pepper')
+            .catalog__col 
+              +card
+            .catalog__col 
+              +card
+            .catalog__col 
+              +card
+            .catalog__col 
+              +card
+            .catalog__col 
+              +card('pepper')
+      //	/catalog
 
     include core/footer.pug

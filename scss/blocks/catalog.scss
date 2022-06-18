@@ -1,0 +1,44 @@
+/* catalog */
+.catalog { 
+  padding-bottom: 110px;
+  &__title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 20px;
+    margin-bottom: 43px;
+  }
+  &__col {
+    @include col(4);
+    &:nth-child(1n) {
+      .card__img {
+        background-color: #FE724B;
+      }
+    }
+    &:nth-child(2n) {
+      .card__img {
+        background-color: #B3E0EB;
+      }
+    }
+    &:nth-child(3n) {
+      .card__img {
+        background-color: #FCBEC8;
+      }
+    }
+    &:nth-child(4n) {
+      .card__img {
+        background-color: #B3E0EB;
+      }
+    }
+    &:nth-child(5n) {
+      .card__img {
+        background-color: #FCBEC8;
+      }
+    }
+    &:nth-child(6n) {
+      .card__img {
+        background-color: #FE724B;
+      }
+    }
+  }
+}
+/* /catalog */

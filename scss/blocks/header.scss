@@ -45,6 +45,9 @@
   }
   @media (max-width: $break_sm) {
     padding: 40px 0 16px;
+    .wrapper {
+      padding: 0 10px;
+    }
     &__burger {
       display: block;
     }

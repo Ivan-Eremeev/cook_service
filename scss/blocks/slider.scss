@@ -38,6 +38,12 @@
     }
   }
   @media (max-width: $break_xs) {
+    padding-bottom: 40px;
+    .swiper-slide-active {
+      >* {
+        box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.05), 10px 10px 20px rgba(0, 0, 0, 0.5);
+      }
+    }
     &__pagination {
       display: none;
     }
