@@ -2,6 +2,7 @@
 .filter { 
   margin-bottom: 50px;
   overflow: hidden;
+  position: relative;
   &__links {
     font-weight: 700;
     font-size: 28px;
@@ -24,9 +25,8 @@
     }
   }
   &__categories {
-    display: flex;
-    padding: 20px 0;
-    margin-right: -30px;
+    width: 100%;
+    height: 77px;
     overflow-x: auto;
     overflow-y: hidden;
     overflow: auto;
@@ -35,6 +35,15 @@
     &::-webkit-scrollbar {
       width: 0;
       height: 0;
+    }
+  }
+  &__categories-stick {
+    width: 100%;
+    padding: 20px 0;
+    position: absolute;
+    z-index: 5;
+    .wrapper {
+      display: flex;
     }
   }
   &__category {
@@ -54,6 +63,15 @@
     &.active {
       box-shadow: inset -1px -1px 3px rgba(255, 255, 255, 0.8), inset -6px -6px 5px rgba(255, 255, 255, 0.3), inset 1px 1px 3px rgba(0, 0, 0, 0.15), inset 6px 6px 5px rgba(0, 0, 0, 0.06);
       cursor: default;
+    }
+  }
+  &.stiky {
+    .filter__categories-stick {
+      background: #E9E9E9;
+      box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
+      position: fixed;
+      top: 0;
+      left: 0;
     }
   }
   @media (max-width: $break_sm) {

@@ -5,6 +5,7 @@ $(document).ready(function () {
     slidesPerView: 1.16,
     pagination: {
       el: '.slider__pagination',
+      clickable: true,
     },
     breakpoints: {
       1200: {
@@ -45,6 +46,32 @@ $(document).ready(function () {
     }
   }
   counter('.js-counter');
+
+  // Stiky menu // Липкое меню. При прокрутке к элементу #menu добавляется класс .stiky который и стилизуем
+  function stikyMenu() {
+    const header = document.querySelector('#menu');
+
+    if (header) {
+      setNavbarPosition();
+
+      window.addEventListener('scroll', () => {
+        setNavbarPosition();
+        console.log(window.scrollY);
+      });
+      console.log(header.offsetTop);
+    }
+
+    function setNavbarPosition() {
+
+      if (window.scrollY > header.offsetTop) {
+        header.classList.add('stiky');
+      } else {
+        header.classList.remove('stiky');
+      }
+
+    }
+  }
+  stikyMenu();
 
   // Кнопка цены в карточке товара
 	function clickToggle(block) {

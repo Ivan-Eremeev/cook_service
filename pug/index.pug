@@ -53,27 +53,67 @@ block content
       //	/slider
 
       // filter
-      .filter
-        .wrapper
-          .filter__links
+      .filter#menu 
+        .filter__links
+          .wrapper
             span.filter__link.active Частным клиентам
             a(href="#").filter__link Корпоративные заказы
-          .filter__categories 
-            span.filter__category.active Любимое
-            a(href="#").filter__category Закуски
-            a(href="#").filter__category Салаты
-            a(href="#").filter__category Горячее
-            a(href="#").filter__category Суши и роллы
-            a(href="#").filter__category Супы
-            a(href="#").filter__category Детское
-            a(href="#").filter__category Десерты
-            a(href="#").filter__category Напитки
+        .filter__categories
+          .filter__categories-stick
+            .wrapper
+              span.filter__category.active Любимое
+              a(href="#").filter__category Закуски
+              a(href="#").filter__category Салаты
+              a(href="#").filter__category Горячее
+              a(href="#").filter__category Суши и роллы
+              a(href="#").filter__category Супы
+              a(href="#").filter__category Детское
+              a(href="#").filter__category Десерты
+              a(href="#").filter__category Напитки
       //	/filter
 
       // catalog
       .catalog
         .wrapper 
           .catalog__title Закуски
+          .row.gy
+            .catalog__col 
+              +card('pepper')
+            .catalog__col 
+              +card
+            .catalog__col 
+              +card
+            .catalog__col 
+              +card
+            .catalog__col 
+              +card
+            .catalog__col 
+              +card('pepper')
+      //	/catalog
+
+      // catalog
+      .catalog
+        .wrapper 
+          .catalog__title Салаты
+          .row.gy
+            .catalog__col 
+              +card('pepper')
+            .catalog__col 
+              +card
+            .catalog__col 
+              +card
+            .catalog__col 
+              +card
+            .catalog__col 
+              +card
+            .catalog__col 
+              +card('pepper')
+      //	/catalog
+
+      // catalog
+      .catalog
+        .wrapper 
+          .catalog__title Горячее
           .row.gy
             .catalog__col 
               +card('pepper')

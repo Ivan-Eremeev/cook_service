@@ -864,6 +864,7 @@ svg {
 .filter {
   margin-bottom: 50px;
   overflow: hidden;
+  position: relative;
 }
 .filter__links {
   font-weight: 700;
@@ -890,11 +891,8 @@ svg {
   cursor: default;
 }
 .filter__categories {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding: 20px 0;
-  margin-right: -30px;
+  width: 100%;
+  height: 77px;
   overflow-x: auto;
   overflow-y: hidden;
   overflow: auto;
@@ -904,6 +902,17 @@ svg {
 .filter__categories::-webkit-scrollbar {
   width: 0;
   height: 0;
+}
+.filter__categories-stick {
+  width: 100%;
+  padding: 20px 0;
+  position: absolute;
+  z-index: 5;
+}
+.filter__categories-stick .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 .filter__category {
   display: inline-block;
@@ -929,6 +938,14 @@ svg {
   -webkit-box-shadow: inset -1px -1px 3px rgba(255, 255, 255, 0.8), inset -6px -6px 5px rgba(255, 255, 255, 0.3), inset 1px 1px 3px rgba(0, 0, 0, 0.15), inset 6px 6px 5px rgba(0, 0, 0, 0.06);
   box-shadow: inset -1px -1px 3px rgba(255, 255, 255, 0.8), inset -6px -6px 5px rgba(255, 255, 255, 0.3), inset 1px 1px 3px rgba(0, 0, 0, 0.15), inset 6px 6px 5px rgba(0, 0, 0, 0.06);
   cursor: default;
+}
+.filter.stiky .filter__categories-stick {
+  background: #E9E9E9;
+  -webkit-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 @media (max-width: 768px) {
   .filter__links {
@@ -984,6 +1001,12 @@ svg {
   background-color: #FE724B;
 }
 @media (max-width: 500px) {
+  .catalog {
+    padding-bottom: 0;
+  }
+  .catalog .row.gy {
+    margin-top: 0;
+  }
   .catalog__title {
     display: none;
   }
@@ -1261,6 +1284,9 @@ svg {
     background-color: #212629;
     -webkit-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5), -1px -1px 6px rgba(255, 255, 255, 0.05), -5px -5px 20px rgba(255, 255, 255, 0.1), 5px 5px 20px rgba(0, 0, 0, 0.8);
     box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5), -1px -1px 6px rgba(255, 255, 255, 0.05), -5px -5px 20px rgba(255, 255, 255, 0.1), 5px 5px 20px rgba(0, 0, 0, 0.8);
+  }
+  .card:hover .card__btn .btn:hover {
+    color: #fff;
   }
   .card:hover .card__counter {
     border: 1px solid rgba(255, 255, 255, 0.08);

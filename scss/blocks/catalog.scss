@@ -43,6 +43,10 @@
     }
   }
   @media (max-width: $break_xs) {
+    padding-bottom: 0;
+    .row.gy {
+      margin-top: 0;
+    }
     &__title {
       display: none;
     }
