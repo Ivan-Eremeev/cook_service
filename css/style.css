@@ -1528,6 +1528,11 @@ svg {
     box-shadow: none;
   }
 }
+@media (max-width: 370px) {
+  .card__img {
+    width: 130px;
+  }
+}
 
 /* /card */
 /* footer */

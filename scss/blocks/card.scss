@@ -325,5 +325,10 @@
       }
     }
   }
+  @media (max-width: 370px) {
+    &__img {
+      width: 130px;
+    }
+  }
 }
 /* /card */
