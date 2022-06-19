@@ -15,6 +15,11 @@ $(document).ready(function () {
     }
   });
 
+  const filterSlider = new Swiper('#filterSlider', {
+    slidesPerView: 'auto',
+    freeMode: true,
+  });
+
   // Изменение количества товара (плюс минус)
   function counter(block) {
     const counter = document.querySelectorAll(block);
@@ -56,9 +61,7 @@ $(document).ready(function () {
 
       window.addEventListener('scroll', () => {
         setNavbarPosition();
-        console.log(window.scrollY);
       });
-      console.log(header.offsetTop);
     }
 
     function setNavbarPosition() {
@@ -82,5 +85,43 @@ $(document).ready(function () {
 		}
 	}
 	clickToggle($('.js-click'));
+
+  // Делает активным пункт меню при скролле до блока
+	function menuItemActive(menu) {
+		var lastId,
+		topMenu = menu,
+		topMenuHeight = topMenu.outerHeight(),
+		menuItems = topMenu.find("a"),
+		scrollItems = menuItems.map(function(){
+			var item = $($(this).attr("href"));
+			if (item.length) { return item; }
+		});
+		menuItems.click(function(e){
+			var href = $(this).attr("href"),
+					offsetTop = href === "#" ? 0 : $(href).offset().top-topMenuHeight-100;
+			$('html, body').stop().animate({ 
+					scrollTop: offsetTop
+			}, 300);
+			e.preventDefault();
+		});
+		$(window).scroll(function(){
+			var fromTop = $(this).scrollTop()+topMenuHeight;
+			var cur = scrollItems.map(function(){
+				if ($(this).offset().top < fromTop+101)
+					return this;
+			});
+      var index = cur.length;
+			cur = cur[cur.length-1];
+			var id = cur && cur.length ? cur[0].id : "";
+			if (lastId !== id) {
+					lastId = id;
+					menuItems
+						.removeClass("active")
+						.filter("[href='#"+id+"']").addClass("active");
+        filterSlider.slideTo(index);
+			}                   
+		});
+	};
+  menuItemActive($('#filterSlider'));
 
 });

@@ -1,0 +1,39 @@
+/* footer */
+.footer { 
+  padding-top: 40px;
+  padding-bottom: 50px;
+  &__col {
+    @include col(4);
+  }
+  &__list {
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 20px;
+    li {
+      display: flex;
+      align-items: center;
+      height: 60px;
+      border-top: 1px solid rgba(22, 22, 22, 0.08);
+      a {
+        display: inline-flex;
+        align-items: center;
+        color: $text;
+        svg {
+          margin-right: 20px;
+          fill: $text;
+          transition: 0.3s;
+        }
+        &:hover {
+          color: $green;
+          svg {
+            fill: $green;
+          }
+        }
+      }
+    } 
+  }
+  @media (max-width: $break_sm) {
+    display: none;
+  }
+}
+/* /footer */

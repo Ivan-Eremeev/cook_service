@@ -45,6 +45,7 @@
     margin-bottom: 20px;
     color: rgba(33, 38, 41, 0.5);
     li {
+      white-space: nowrap;
       &:not(:last-child) {
         margin-right: 10px;
         padding-right: 10px;
