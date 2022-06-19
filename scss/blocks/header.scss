@@ -21,7 +21,7 @@
     }
   }
   &__user {
-
+    position: relative;
   }
   &__user-icon {
     display: flex;
@@ -41,7 +41,81 @@
     }
   }
   &__user-menu {
-    
+    width: 400px;
+    padding: 70px 20px 20px;
+    box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.05), 60px 60px 80px rgba(0, 0, 0, 0.35);
+    border-radius: 40px 40px 40px 5px;
+    background-color: $gray;
+    position: absolute;
+    top: calc(100% + 20px);
+    right: 0;
+    z-index: 6;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+    &.open {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+  &__user-close {
+    width: 24px;
+    height: 24px;
+    background-color: $text;
+    border-radius: 100%;
+    position: absolute;
+    top: 23px;
+    right: 20px;
+    cursor: pointer;
+    user-select: none;
+    &:after,&:before {
+      content: '';
+      display: block;
+      width: 55%;
+      height: 2px;
+      background-color: #fff;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+    }
+    &:after {
+      transform: translate(-50%,-50%) rotate(45deg);
+    }
+    &:before {
+      transform: translate(-50%,-50%) rotate(-45deg);
+    }
+  }
+  &__user-list {
+    margin-bottom: 45px;
+    li {
+      border-top: 1px solid #fff;
+      &:last-child {
+        border-bottom: 1px solid #fff;
+      }
+      a {
+        display: flex;
+        align-items: center;
+        padding: 17px 0;
+        color: $text;
+        svg {
+          flex-shrink: 0;
+          margin-right: 20px;
+          fill: $text;
+          transition: 0.3s;
+        }
+        &:hover {
+          color: $green;
+          svg {
+            fill: $green;
+          }
+        }
+      }
+    }
+  }
+  &__user-btn {
+    .btn {
+      width: 100%;
+    } 
   }
   @media (max-width: $break_sm) {
     padding: 40px 0 16px;
@@ -52,12 +126,32 @@
       display: block;
     }
     &__bar {
-      .btn {
+      > .btn {
         display: none;
       }
     }
     &__user-icon {
       box-shadow: none;
+    }
+  }
+  @media (max-width: $break_xs) {
+    &__user-menu {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      border-radius: 0;
+      box-shadow: none;
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      right: -500px;
+      &.open {
+        right: 0;
+      }
+    }
+    &__user-list {
+      flex-grow: 1;
+      overflow-y: auto;
     }
   }
 }

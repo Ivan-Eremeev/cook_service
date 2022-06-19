@@ -124,4 +124,33 @@ $(document).ready(function () {
 	};
   menuItemActive($('#filterSlider'));
 
+  // Выпадайки при клике по кнопке
+	// Задать блокам выпадайкам айдишник совпадающий с data-drop="" в кнопке для этого блока
+	// Задать кнопкам .js-drop-btn и data-drop="" с айдишником блока выпадайки
+	function dropBlock(btn) {
+		var $this = undefined,
+				drop = undefined,
+				close = $('.js-drop-close');
+		btn.on('click', function () {
+			$this = $(this);
+			drop = $('#' + $this.data('drop'));
+			$this.toggleClass('is-active');
+			drop.toggleClass('open');
+			$(document).click(function (e) {
+				if (!$this.is(e.target)
+					&& $this.has(e.target).length === 0
+					&& !drop.is(e.target)
+					&& drop.has(e.target).length === 0) {
+					$this.removeClass('is-active');
+					drop.removeClass('open');
+				}
+			});
+		})
+		close.on('click', function () {
+			$('[data-drop="' + $(this).data('drop') +'"]').removeClass('is-active');
+			$('#' + $(this).data('drop')).removeClass('open');
+		})
+	}
+	dropBlock($('.js-drop-btn'));
+
 });

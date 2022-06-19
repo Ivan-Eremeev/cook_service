@@ -19,6 +19,7 @@
         align-items: center;
         color: $text;
         svg {
+          flex-shrink: 0;
           margin-right: 20px;
           fill: $text;
           transition: 0.3s;
