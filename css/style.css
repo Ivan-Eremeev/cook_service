@@ -521,7 +521,7 @@ svg {
   position: absolute;
   top: calc(100% + 20px);
   right: 0;
-  z-index: 6;
+  z-index: 11;
   opacity: 0;
   visibility: hidden;
   -webkit-transition: 0.3s;
@@ -1589,3 +1589,114 @@ svg {
 }
 
 /* /footer */
+/* mobile-menu */
+.mobile-menu {
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+  max-width: 500px;
+  padding: 70px 20px 20px;
+  background-color: #E9E9E9;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: -500px;
+  z-index: 11;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+.mobile-menu.open {
+  opacity: 1;
+  visibility: visible;
+  left: 0;
+}
+.mobile-menu__close {
+  width: 24px;
+  height: 24px;
+  background-color: #212629;
+  border-radius: 100%;
+  position: absolute;
+  top: 23px;
+  right: 20px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.mobile-menu__close:after, .mobile-menu__close:before {
+  content: "";
+  display: block;
+  width: 55%;
+  height: 2px;
+  background-color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+.mobile-menu__close:after {
+  -webkit-transform: translate(-50%, -50%) rotate(45deg);
+  -ms-transform: translate(-50%, -50%) rotate(45deg);
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.mobile-menu__close:before {
+  -webkit-transform: translate(-50%, -50%) rotate(-45deg);
+  -ms-transform: translate(-50%, -50%) rotate(-45deg);
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+.mobile-menu__list {
+  margin-bottom: 45px;
+  overflow-y: auto;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+.mobile-menu__list li {
+  border-top: 1px solid #fff;
+}
+.mobile-menu__list li:last-child {
+  border-bottom: 1px solid #fff;
+}
+.mobile-menu__list li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 17px 0;
+  color: #212629;
+}
+.mobile-menu__list li a svg {
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  margin-right: 20px;
+  fill: #212629;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+.mobile-menu__list li a:hover {
+  color: #25D366;
+}
+.mobile-menu__list li a:hover svg {
+  fill: #25D366;
+}
+.mobile-menu__btn .btn {
+  width: 100%;
+}
+@media (max-width: 768px) {
+  .mobile-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+/* /mobile-menu */
