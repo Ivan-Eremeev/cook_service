@@ -1600,6 +1600,8 @@ svg {
   max-width: 500px;
   padding: 70px 20px 20px;
   background-color: #E9E9E9;
+  -webkit-box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.05), 60px 60px 80px rgba(0, 0, 0, 0.35);
+  box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.05), 60px 60px 80px rgba(0, 0, 0, 0.35);
   position: fixed;
   top: 0;
   bottom: 0;
