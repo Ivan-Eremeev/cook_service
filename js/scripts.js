@@ -140,7 +140,7 @@ $(document).ready(function () {
 			drop = $('#' + $this.data('drop'));
 			$this.toggleClass('is-active');
 			drop.toggleClass('open');
-			$(document).click(function (e) {
+			$(document).mouseup(function (e) {
 				if (!$this.is(e.target)
 					&& $this.has(e.target).length === 0
 					&& !drop.is(e.target)

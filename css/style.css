@@ -621,7 +621,7 @@ svg {
     box-shadow: none;
   }
 }
-@media (max-width: 500px) {
+@media (max-width: 768px) {
   .header__user-menu {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -631,6 +631,7 @@ svg {
     -ms-flex-direction: column;
     flex-direction: column;
     width: 100%;
+    max-width: 500px;
     border-radius: 0;
     -webkit-box-shadow: none;
     box-shadow: none;

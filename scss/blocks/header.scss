@@ -134,11 +134,12 @@
       box-shadow: none;
     }
   }
-  @media (max-width: $break_xs) {
+  @media (max-width: $break_sm) {
     &__user-menu {
       display: flex;
       flex-direction: column;
       width: 100%;
+      max-width: 500px;
       border-radius: 0;
       box-shadow: none;
       position: fixed;
