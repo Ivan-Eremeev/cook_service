@@ -1153,7 +1153,6 @@ svg {
 .card {
   height: 100%;
   border-radius: 40px 40px 40px 4px;
-  background-color: #E9E9E9;
   cursor: pointer;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -1399,6 +1398,7 @@ svg {
   .card:hover {
     -webkit-box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.05), 40px 40px 50px rgba(0, 0, 0, 0.5);
     box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.05), 40px 40px 50px rgba(0, 0, 0, 0.5);
+    z-index: 3;
   }
   .card:hover .card__content {
     background-color: #212629;

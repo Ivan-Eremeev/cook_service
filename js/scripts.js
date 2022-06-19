@@ -3,6 +3,10 @@ $(document).ready(function () {
   // Swiper
   const sliderBanners = new Swiper('#sliderBanners', {
     slidesPerView: 1.16,
+    speed: 1000,
+    autoplay: {
+      delay: 3000,
+    },
     pagination: {
       el: '.slider__pagination',
       clickable: true,
