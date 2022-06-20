@@ -26,13 +26,23 @@ body {
 svg {
   max-width: 100%;
 }
-.mobile-hide {
+.tablet-hide {
   @media (max-width: $break_sm) {
     display: none !important;
   }
 }
-.mobile-visible {
+.tablet-visible {
   @media (min-width: $break_sm + 1) {
+    display: none !important;
+  }
+}
+.mobile-hide {
+  @media (max-width: $break_xs) {
+    display: none !important;
+  }
+}
+.mobile-visible {
+  @media (min-width: $break_xs + 1) {
     display: none !important;
   }
 }

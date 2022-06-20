@@ -122,12 +122,24 @@ svg {
 }
 
 @media (max-width: 768px) {
-  .mobile-hide {
+  .tablet-hide {
     display: none !important;
   }
 }
 
 @media (min-width: 769px) {
+  .tablet-visible {
+    display: none !important;
+  }
+}
+
+@media (max-width: 500px) {
+  .mobile-hide {
+    display: none !important;
+  }
+}
+
+@media (min-width: 501px) {
   .mobile-visible {
     display: none !important;
   }
@@ -640,7 +652,7 @@ svg {
   }
 }
 @media (max-width: 768px) {
-  .header.mobile-none {
+  .header.mobile-hide {
     display: none;
   }
   .header__user-menu {
@@ -1769,17 +1781,15 @@ svg {
   }
 }
 @media (max-width: 768px) {
-  .backtitle__text {
-    font-size: 24px;
-    line-height: 36px;
-  }
-}
-@media (max-width: 500px) {
   .backtitle {
     padding: 23px 0;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
+  }
+  .backtitle__text {
+    font-size: 24px;
+    line-height: 36px;
   }
   .backtitle:after {
     content: "";
@@ -1893,3 +1903,140 @@ svg {
 }
 
 /* /textblock */
+/* orders */
+.orders {
+  padding-top: 20px;
+}
+.orders .backtitle {
+  margin-bottom: 40px;
+}
+.orders__filter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 20px;
+  margin: 0 -20px;
+  overflow-y: auto;
+  overflow: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  margin-bottom: 20px;
+}
+.orders__filter::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+.orders__filter-item {
+  position: relative;
+  margin-right: 10px;
+}
+.orders__filter-item input {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+}
+.orders__filter-item input:checked ~ label {
+  background-color: #E9E9E9;
+  -webkit-box-shadow: inset -1px -1px 3px rgba(255, 255, 255, 0.8), inset -6px -6px 5px rgba(255, 255, 255, 0.3), inset 1px 1px 3px rgba(0, 0, 0, 0.15), inset 6px 6px 5px rgba(0, 0, 0, 0.06);
+  box-shadow: inset -1px -1px 3px rgba(255, 255, 255, 0.8), inset -6px -6px 5px rgba(255, 255, 255, 0.3), inset 1px 1px 3px rgba(0, 0, 0, 0.15), inset 6px 6px 5px rgba(0, 0, 0, 0.06);
+}
+.orders__filter-item label {
+  display: block;
+  padding: 9px 20px;
+  background: #E9E9E9;
+  -webkit-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.08), -1px -1px 6px rgba(255, 255, 255, 0.5), -5px -5px 20px #FFFFFF, 5px 5px 20px #D3D3D3;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.08), -1px -1px 6px rgba(255, 255, 255, 0.5), -5px -5px 20px #FFFFFF, 5px 5px 20px #D3D3D3;
+  border-radius: 99px;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 20px;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.orders__filter-item label:hover {
+  background-color: #fff;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.orders__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 20px 30px 21px 40px;
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 40px 40px 40px 5px;
+  margin-bottom: 20px;
+}
+.orders__date {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 25px;
+  margin-bottom: 5px;
+}
+.orders__num {
+  font-weight: 300;
+  font-size: 17px;
+  line-height: 20px;
+  color: rgba(33, 38, 41, 0.5);
+}
+.orders__status {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.orders__status-text {
+  margin-right: 10px;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 20px;
+}
+.orders__status-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  -webkit-box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.05), 15px 15px 20px rgba(0, 0, 0, 0.15);
+  box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.05), 15px 15px 20px rgba(0, 0, 0, 0.15);
+  border-radius: 100%;
+}
+.orders__status-icon--current {
+  background-color: #FED149;
+}
+.orders__status-icon--cancelled {
+  background-color: #EE7722;
+}
+.orders__status-icon--delivered {
+  background-color: #96C86E;
+}
+@media (max-width: 768px) {
+  .orders {
+    padding-top: 0;
+  }
+  .orders .backtitle {
+    margin-bottom: 0;
+  }
+}
+
+/* /orders */

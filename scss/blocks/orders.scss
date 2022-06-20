@@ -1,0 +1,115 @@
+/* orders */
+.orders { 
+  padding-top: 20px;
+  .backtitle {
+    margin-bottom: 40px;
+  }
+  &__filter {
+    display: flex;
+    padding: 20px;
+    margin: 0 -20px;
+    overflow-y: auto;
+    overflow: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    margin-bottom: 20px;
+    &::-webkit-scrollbar {
+      width: 0;
+      height: 0;
+    }
+  }
+  &__filter-item {
+    position: relative;
+    margin-right: 10px;
+    input {
+      opacity: 0;
+      visibility: hidden;
+      position: absolute;
+      &:checked {
+        ~ label {
+          background-color: $gray;
+          box-shadow: inset -1px -1px 3px rgba(255, 255, 255, 0.8), inset -6px -6px 5px rgba(255, 255, 255, 0.3), inset 1px 1px 3px rgba(0, 0, 0, 0.15), inset 6px 6px 5px rgba(0, 0, 0, 0.06);
+        }
+      }
+    }  
+    label {
+      display: block;
+      padding: 9px 20px;
+      background: $gray;
+      box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.08), -1px -1px 6px rgba(255, 255, 255, 0.5), -5px -5px 20px #FFFFFF, 5px 5px 20px #D3D3D3;
+      border-radius: 99px;
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 20px;
+      transition: 0.3s;
+      cursor: pointer;
+      user-select: none;
+      &:hover {
+        background-color: #fff;
+        box-shadow: 0 0 10px rgb(0 0 0 / 20%);
+      }
+    }
+  }
+  &__items {
+    
+  }
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px 21px 40px;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 40px 40px 40px 5px;
+    margin-bottom: 20px;
+  }
+  &__item-content {
+    
+  }
+  &__date {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 25px;
+    margin-bottom: 5px;
+  }
+  &__num {
+    font-weight: 300;
+    font-size: 17px;
+    line-height: 20px;
+    color: rgba(33, 38, 41, 0.5);
+  }
+  &__status {
+    display: flex;
+    align-items: center;
+  }
+  &__status-text {
+    margin-right: 10px;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 20px;
+  }
+  &__status-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.05), 15px 15px 20px rgba(0, 0, 0, 0.15);
+    border-radius: 100%;
+    &--current {
+      background-color: #FED149;
+    }
+    &--cancelled {
+      background-color: #EE7722;
+    }
+    &--delivered {
+      background-color: #96C86E;
+    }
+  }
+  @media (max-width: $break_sm) {
+    padding-top: 0;
+    .backtitle {
+      margin-bottom: 0;
+    }
+  }
+}
+/* /orders */

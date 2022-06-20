@@ -135,7 +135,7 @@
     }
   }
   @media (max-width: $break_sm) {
-    &.mobile-none {
+    &.mobile-hide {
       display: none;
     }
     &__user-menu {

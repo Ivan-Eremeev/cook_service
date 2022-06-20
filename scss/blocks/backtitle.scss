@@ -31,14 +31,12 @@
     }
   }
   @media (max-width: $break_sm) {
+    padding: 23px 0;
+    justify-content: space-between;
     &__text {
       font-size: 24px;
       line-height: 36px;
     }
-  }
-  @media (max-width: $break_xs) {
-    padding: 23px 0;
-    justify-content: space-between;
     &:after {
       content: '';
       display: block;

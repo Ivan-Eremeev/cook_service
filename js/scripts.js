@@ -157,4 +157,28 @@ $(document).ready(function () {
 	}
 	dropBlock($('.js-drop-btn'));
 
+  // Табы
+	function tabs(tabs) {
+		if (tabs.length) {
+			tabs.each(function() {
+				var trigger = $(this).find('.tabs_triggers').children(),
+						content = $(this).find('.tabs_content').children(),
+						time = 300;
+				trigger.click(function () {
+					var $this = $(this),
+							index = $this.index();
+					if (!$this.hasClass('active')) {
+						trigger.removeClass('active');
+						$this.addClass('active');
+						content.removeClass('open').hide();
+						content.eq(index).fadeIn(time, function () {$(this).addClass('open')});
+					}else {
+						return false;
+					}
+				});
+			});
+		}
+	}
+	tabs($('.js-tabs'));
+
 });
