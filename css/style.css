@@ -242,6 +242,24 @@ svg {
   flex-grow: 1;
 }
 
+.navpage h1 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.navpage ul {
+  font-size: 18px;
+}
+.navpage ul li {
+  margin: 10px 0;
+}
+.navpage ul li a {
+  color: #212629;
+}
+.navpage ul li a:hover {
+  color: #25D366;
+}
+
 /* /settings */
 /*!
  * Hamburgers
@@ -622,6 +640,9 @@ svg {
   }
 }
 @media (max-width: 768px) {
+  .header.mobile-none {
+    display: none;
+  }
   .header__user-menu {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1703,3 +1724,172 @@ svg {
 }
 
 /* /mobile-menu */
+/* backtitle */
+.backtitle {
+  position: relative;
+}
+.backtitle__arrow {
+  width: 22px;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  position: absolute;
+  top: 52%;
+  right: calc(100% + 40px);
+  -webkit-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  stroke: #212629;
+}
+.backtitle__arrow:hover {
+  stroke: #25D366;
+}
+.backtitle__text {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 50px;
+}
+.backtitle__cross {
+  display: none;
+}
+@media (max-width: 1400px) {
+  .backtitle {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  .backtitle__arrow {
+    position: static;
+    -webkit-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    transform: translate(0, 0);
+    margin-right: 40px;
+  }
+}
+@media (max-width: 768px) {
+  .backtitle__text {
+    font-size: 24px;
+    line-height: 36px;
+  }
+}
+@media (max-width: 500px) {
+  .backtitle {
+    padding: 23px 0;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+  .backtitle:after {
+    content: "";
+    display: block;
+    height: 1px;
+    background-color: #fff;
+    position: absolute;
+    left: -20px;
+    right: -20px;
+    bottom: 0;
+  }
+  .backtitle__arrow {
+    margin-right: 0;
+    -webkit-transform: translate(0, 2px);
+    -ms-transform: translate(0, 2px);
+    transform: translate(0, 2px);
+  }
+  .backtitle__text {
+    margin: 0 7px;
+    font-size: 18px;
+    line-height: 20px;
+    text-align: center;
+  }
+  .backtitle__cross {
+    display: block;
+    width: 24px;
+    height: 24px;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    background-color: #212629;
+    border-radius: 100%;
+    position: relative;
+  }
+  .backtitle__cross:after, .backtitle__cross:before {
+    content: "";
+    display: block;
+    width: 65%;
+    height: 2px;
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+  }
+  .backtitle__cross:after {
+    -webkit-transform: translate(-50%, -50%) rotate(45deg);
+    -ms-transform: translate(-50%, -50%) rotate(45deg);
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+  .backtitle__cross:before {
+    -webkit-transform: translate(-50%, -50%) rotate(-45deg);
+    -ms-transform: translate(-50%, -50%) rotate(-45deg);
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+}
+
+/* /backtitle */
+/* textblock */
+.textblock {
+  padding-top: 20px;
+}
+.textblock .backtitle {
+  margin-bottom: 55px;
+}
+.textblock__text ol {
+  counter-reset: li;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 25px;
+  margin-bottom: 60px;
+}
+.textblock__text ol li {
+  margin: 20px 0;
+}
+.textblock__text ol li:before {
+  counter-increment: li;
+  content: counters(li, ".") ". ";
+}
+.textblock__text ol ol {
+  font-size: 17px;
+  line-height: 20px;
+  font-weight: 300;
+  color: #858889;
+}
+.textblock__text div {
+  margin-bottom: 60px;
+}
+.textblock__text h1,
+.textblock__text h2,
+.textblock__text h3,
+.textblock__text h4,
+.textblock__text h5,
+.textblock__text h6 {
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 25px;
+  margin-bottom: 20px;
+}
+.textblock__text p {
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 20px;
+  color: #858889;
+}
+@media (max-width: 500px) {
+  .textblock {
+    padding-top: 0;
+  }
+  .textblock .backtitle {
+    margin-bottom: 30px;
+  }
+}
+
+/* /textblock */

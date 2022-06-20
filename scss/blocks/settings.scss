@@ -85,4 +85,23 @@ svg {
 .content {
   flex-grow: 1;
 }
+.navpage {
+  h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  ul {
+    font-size: 18px;
+    li {
+      margin: 10px 0;
+      a {
+        color: $text;
+        &:hover {
+          color: $green;
+        }
+      }
+    }
+  }
+}
 /* /settings */

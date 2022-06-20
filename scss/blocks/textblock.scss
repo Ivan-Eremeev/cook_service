@@ -1,0 +1,56 @@
+/* textblock */
+.textblock { 
+  padding-top: 20px;
+  .backtitle {
+    margin-bottom: 55px;
+  }
+  &__text {
+    ol {
+      counter-reset: li;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 25px;
+      margin-bottom: 60px;
+      li {
+        margin: 20px 0;
+        &:before {
+          counter-increment: li;
+          content: counters(li, ".") ". ";
+        }
+      }
+      ol {
+        font-size: 17px;
+        line-height: 20px;
+        font-weight: 300;
+        color: #858889;
+      }
+    }
+    div {
+      margin-bottom: 60px;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-size: 20px;
+      font-weight: bold;
+      line-height: 25px;
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: 17px;
+      font-weight: 300;
+      line-height: 20px;
+      color: #858889;
+    }
+  }
+  @media (max-width: $break_xs) {
+    padding-top: 0;
+    .backtitle {
+      margin-bottom: 30px;
+    }
+  }
+}
+/* /textblock */

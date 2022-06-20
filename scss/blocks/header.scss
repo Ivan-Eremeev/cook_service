@@ -135,6 +135,9 @@
     }
   }
   @media (max-width: $break_sm) {
+    &.mobile-none {
+      display: none;
+    }
     &__user-menu {
       display: flex;
       flex-direction: column;
