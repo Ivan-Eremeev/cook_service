@@ -1906,6 +1906,7 @@ svg {
 /* orders */
 .orders {
   padding-top: 20px;
+  padding-bottom: 100px;
 }
 .orders .backtitle {
   margin-bottom: 40px;
@@ -2033,6 +2034,7 @@ svg {
 @media (max-width: 768px) {
   .orders {
     padding-top: 0;
+    padding-bottom: 0;
   }
   .orders .backtitle {
     margin-bottom: 0;
@@ -2040,3 +2042,286 @@ svg {
 }
 
 /* /orders */
+/* order */
+.order {
+  padding-top: 20px;
+  padding-bottom: 100px;
+}
+.order .backtitle {
+  margin-bottom: 58px;
+}
+.order__progress {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  position: relative;
+}
+.order__progress:after {
+  content: "";
+  display: block;
+  height: 4px;
+  background-color: #fff;
+  position: absolute;
+  top: 18px;
+  left: 20px;
+  right: 20px;
+}
+.order__progress-item {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  z-index: 2;
+}
+.order__progress-item.active .order__progress-icon {
+  background-color: #212629;
+}
+.order__progress-item.active .order__progress-icon--fill svg {
+  fill: #fff;
+}
+.order__progress-item.active .order__progress-icon--stroke svg {
+  stroke: #fff;
+}
+.order__progress-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #fff;
+  -webkit-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.08), -1px -1px 6px rgba(255, 255, 255, 0.5), -5px -5px 20px #FFFFFF, 5px 5px 20px #D3D3D3;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.08), -1px -1px 6px rgba(255, 255, 255, 0.5), -5px -5px 20px #FFFFFF, 5px 5px 20px #D3D3D3;
+  border-radius: 100%;
+  margin-bottom: 11px;
+}
+.order__progress-icon--fill svg {
+  fill: #212629;
+}
+.order__progress-icon--stroke svg {
+  stroke: #212629;
+}
+.order__item {
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 20px 20px 20px 5px;
+  margin-bottom: 10px;
+}
+.order__item--big {
+  padding: 28px 40px 7px;
+}
+.order__food {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+.order__food-left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.order__food-img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: 60px;
+  height: 60px;
+  margin-right: 20px;
+  border-radius: 6px;
+  overflow: hidden;
+}
+.order__food-img img {
+  max-height: 100%;
+}
+.order__food-img--orange {
+  background-color: #FE9102;
+}
+.order__food-img--blue {
+  background-color: #B3E0EB;
+}
+.order__food-title {
+  padding-right: 10px;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 37px;
+}
+.order__food-title a {
+  color: #212629;
+}
+.order__food-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.order__food-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 160px;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 20px;
+  color: rgba(33, 38, 41, 0.5);
+}
+.order__food-list li {
+  white-space: nowrap;
+}
+.order__food-list li:not(:last-child) {
+  padding-right: 9px;
+  margin-right: 9px;
+  position: relative;
+}
+.order__food-list li:not(:last-child):after {
+  content: "";
+  display: block;
+  width: 3px;
+  height: 3px;
+  background: rgba(33, 38, 41, 0.2);
+  border-radius: 100%;
+  position: absolute;
+  top: 9px;
+  right: -1px;
+}
+.order__food-price {
+  width: 60px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20px;
+  text-align: right;
+}
+.order__rezults {
+  margin-top: 40px;
+}
+.order__rezult {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 18px 0;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20px;
+  border-top: 1px solid rgba(33, 38, 41, 0.08);
+  border-bottom: 1px solid rgba(33, 38, 41, 0.08);
+  margin-bottom: 4px;
+}
+.order__name {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 20px;
+  color: rgba(33, 38, 41, 0.5);
+}
+.order__text {
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 20px;
+}
+.order__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+.order__buttons .btn {
+  width: 360px;
+}
+.order__buttons .btn:last-child {
+  margin-left: 10px;
+}
+.order__whatsapp-mobile {
+  display: none;
+}
+@media (max-width: 1200px) {
+  .order__food-title {
+    font-size: 20px;
+    line-height: 25px;
+  }
+}
+@media (max-width: 768px) {
+  .order {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  .order__item--big {
+    padding: 20px 20px 10px;
+  }
+}
+@media (max-width: 500px) {
+  .order .backtitle {
+    margin-bottom: 40px;
+  }
+  .order__whatsapp-mobile {
+    display: block;
+    margin-bottom: 30px;
+  }
+  .order__whatsapp-mobile .btn {
+    width: 100%;
+  }
+  .order__item--big {
+    padding: 20px 20px 0;
+  }
+  .order__food {
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    margin-bottom: 20px;
+  }
+  .order__food-img {
+    margin-right: 10px;
+  }
+  .order__food-title {
+    font-size: 18px;
+    line-height: 20px;
+  }
+  .order__rezults {
+    margin-top: 20px;
+  }
+  .order__rezult:last-child {
+    border-bottom: none;
+  }
+  .order__buttons {
+    display: none;
+  }
+}
+
+/* /order */
