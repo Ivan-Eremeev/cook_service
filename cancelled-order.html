@@ -6,7 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="keywords" content="">
 		<meta name="description" content="">
-		<title>Навигация по страницам</title>
+		<title>Заказ отменен</title>
 		<link rel="stylesheet" href="css/libs/swiper-bundle.min.css">
 		<meta name="robots" content="noindex, nofollow">
 		<link rel="stylesheet" href="css/style.css">
@@ -14,7 +14,7 @@
 	<body> 
 		<div class="page"> 
 						<!-- header-->
-						<header class="header">
+						<header class="header mobile-hide">
 							<div class="wrapper">
 								<div class="header__burger hamburger hamburger--squeeze js-drop-btn" data-drop="mobile-menu">
 									<div class="hamburger-box">
@@ -105,22 +105,88 @@
 						</header>
 						<!--	/header-->
 			<main class="content"> 
-				<!-- navpage-->
-				<div class="navpage">
+				<!-- order-->
+				<div class="order">
 					<div class="wrapper">
-						<h1>Навигация по страницам</h1>
-						<ul> 
-							<li> <a href="home.html">Главная</a></li>
-							<li> <a href="agreement.html">Пользовательское соглашение</a></li>
-							<li> <a href="privacy.html">Политика конфиденциальности</a></li>
-							<li> <a href="orders.html">Мои заказы</a></li>
-							<li> <a href="current-order.html">Текущий заказ</a></li>
-							<li><a href="completed-order.html">Заказ выполнен</a></li>
-							<li> <a href="cancelled-order.html">Заказ отменен</a></li>
-						</ul>
+						<!-- backtitle-->
+						<div class="backtitle backtitle--mbsmall"><a class="backtitle__arrow" href="#"> 
+								<svg width="22" height="17" viewBox="0 0 22 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M1 8.09961H21" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"></path>
+									<path d="M1 8.09961L8.1 15.0996" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"></path>
+									<path d="M1 8.1L8.1 1" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"></path>
+								</svg></a>
+							<h1 class="backtitle__text">№298456548</h1><a class="backtitle__cross" href="#"> </a>
+						</div>
+						<!--	/backtitle-->
+						<div class="order__status-title"> <img src="img/cancelled.png" alt=""><span>8 апреля 2054</span></div>
+						<div class="order__whatsapp-mobile"> 
+							<div class="btn btn--green">Управлять в WhatsApp</div>
+						</div>
+						<div class="order__items"> 
+							<div class="order__item order__item--big">
+								<div class="order__food"> 
+									<div class="order__food-left"><a class="order__food-img order__food-img--orange" href="#"><img src="img/food.png" alt=""></a>
+										<div class="order__food-title"> <a href="#">Картофель с луком и белыми грибами</a>
+											<ul class="order__food-list tablet-visible">
+												<li>2 шт.</li>
+												<li>По домашнему</li>
+											</ul>
+										</div>
+									</div>
+									<div class="order__food-right"> 
+										<ul class="order__food-list tablet-hide">
+											<li>2 шт.</li>
+											<li>По домашнему</li>
+										</ul>
+										<div class="order__food-price">860&#8381;</div>
+									</div>
+								</div>
+								<div class="order__food"> 
+									<div class="order__food-left"><a class="order__food-img order__food-img--blue" href="#"><img src="img/food.png" alt=""></a>
+										<div class="order__food-title"> <a href="#">Тар-тар из лососся на авокадо</a>
+											<ul class="order__food-list tablet-visible">
+												<li>10 шт.</li>
+											</ul>
+										</div>
+									</div>
+									<div class="order__food-right"> 
+										<ul class="order__food-list tablet-hide">
+											<li>10 шт.</li>
+										</ul>
+										<div class="order__food-price">6 750&#8381;</div>
+									</div>
+								</div>
+								<div class="order__rezults"> 
+									<div class="order__rezult"> 
+										<div>Доставка</div>
+										<div>0&#8381;</div>
+									</div>
+									<div class="order__rezult"> 
+										<div>Итого</div>
+										<div>7 610&#8381;</div>
+									</div>
+								</div>
+							</div>
+							<div class="order__item"> 
+								<div class="order__name">Когда</div>
+								<div class="order__text">Как можно скорее</div>
+							</div>
+							<div class="order__item"> 
+								<div class="order__name">Когда</div>
+								<div class="order__text">Пресненская набережная, 10с1, кв./офис 250, подъезд 1, этаж 25, домофон 250</div>
+							</div>
+							<div class="order__item"> 
+								<div class="order__name">Оплата</div>
+								<div class="order__text">Картой курьеру</div>
+							</div>
+						</div>
+						<div class="order__buttons"><a class="btn btn--green" href="#">Управлять в WhatsApp</a><a class="btn btn--black" href="#">Отменить заказ</a></div>
+					</div>
+					<div class="floating-button">
+						<div class="btn btn--white">Повторить заказ</div>
 					</div>
 				</div>
-				<!--	/navpage-->
+				<!--	/order-->
 			</main>
 			<!-- footer-->
 			<footer class="footer">

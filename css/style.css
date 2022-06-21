@@ -272,6 +272,22 @@ svg {
   color: #25D366;
 }
 
+.floating-button {
+  display: none;
+}
+@media (max-width: 500px) {
+  .floating-button {
+    display: block;
+    position: fixed;
+    bottom: 20px;
+    left: 30px;
+    right: 30px;
+  }
+  .floating-button .btn {
+    width: 100%;
+  }
+}
+
 /* /settings */
 /*!
  * Hamburgers
@@ -471,6 +487,11 @@ svg {
 }
 .btn--orange:hover {
   background-color: #fff;
+}
+.btn--white {
+  background: #FFFFFF;
+  -webkit-box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.05), 15px 15px 20px rgba(0, 0, 0, 0.15);
+  box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.05), 15px 15px 20px rgba(0, 0, 0, 0.15);
 }
 .btn:hover {
   -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
@@ -1979,6 +2000,11 @@ svg {
   background: rgba(255, 255, 255, 0.4);
   border-radius: 40px 40px 40px 5px;
   margin-bottom: 20px;
+  color: #212629;
+}
+.orders__item:hover {
+  -webkit-box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
 }
 .orders__date {
   font-weight: 700;
@@ -2049,6 +2075,9 @@ svg {
 }
 .order .backtitle {
   margin-bottom: 58px;
+}
+.order .backtitle--mbsmall {
+  margin-bottom: 34px;
 }
 .order__progress {
   display: -webkit-box;
@@ -2220,6 +2249,7 @@ svg {
   font-size: 18px;
   line-height: 20px;
   text-align: right;
+  white-space: nowrap;
 }
 .order__rezults {
   margin-top: 40px;
@@ -2271,6 +2301,19 @@ svg {
 .order__whatsapp-mobile {
   display: none;
 }
+.order__status-title {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 50px;
+  margin-bottom: 40px;
+}
+.order__status-title img {
+  display: block;
+  margin-bottom: 7px;
+}
+.order__status-title span {
+  display: block;
+}
 @media (max-width: 1200px) {
   .order__food-title {
     font-size: 20px;
@@ -2285,8 +2328,21 @@ svg {
   .order__item--big {
     padding: 20px 20px 10px;
   }
+  .order__status-title {
+    font-size: 30px;
+    line-height: 40px;
+  }
+  .order__food-list {
+    width: auto;
+  }
+  .order__food-price {
+    width: auto;
+  }
 }
 @media (max-width: 500px) {
+  .order {
+    padding-bottom: 70px;
+  }
   .order .backtitle {
     margin-bottom: 40px;
   }
@@ -2321,6 +2377,19 @@ svg {
   }
   .order__buttons {
     display: none;
+  }
+  .order__status-title {
+    font-size: 18px;
+    line-height: 20px;
+    text-align: center;
+  }
+}
+@media (max-width: 370px) {
+  .order__food-title {
+    font-size: 16px;
+  }
+  .order__food-list {
+    font-size: 10px;
   }
 }
 
