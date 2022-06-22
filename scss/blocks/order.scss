@@ -173,6 +173,9 @@
     border-top: 1px solid rgba(33, 38, 41, 0.08);
     border-bottom: 1px solid rgba(33, 38, 41, 0.08);
     margin-bottom: 4px;
+    &:last-child {
+      border-bottom: none;
+    }
   }
   &__name {
     font-weight: 300;
@@ -267,11 +270,6 @@
     }
     &__rezults {
       margin-top: 20px;
-    }
-    &__rezult {
-      &:last-child {
-        border-bottom: none;
-      }
     }
     &__buttons {
       display: none;

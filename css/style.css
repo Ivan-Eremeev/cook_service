@@ -2272,6 +2272,9 @@ svg {
   border-bottom: 1px solid rgba(33, 38, 41, 0.08);
   margin-bottom: 4px;
 }
+.order__rezult:last-child {
+  border-bottom: none;
+}
 .order__name {
   font-weight: 300;
   font-size: 14px;
@@ -2371,9 +2374,6 @@ svg {
   }
   .order__rezults {
     margin-top: 20px;
-  }
-  .order__rezult:last-child {
-    border-bottom: none;
   }
   .order__buttons {
     display: none;
