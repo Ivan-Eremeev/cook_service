@@ -1,7 +1,7 @@
 extends core/base.pug
 
 block title 
-  title Заказ отменен
+  title Депозит
 
 block content
 
@@ -20,13 +20,13 @@ block content
 
           // backtitle
           .backtitle
-            a(href="#").backtitle__arrow 
+            a(href="home.html").backtitle__arrow 
               svg(width="22" height="17" viewBox="0 0 22 17" fill="none" xmlns="http://www.w3.org/2000/svg")
                 path(d="M1 8.09961H21" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round")
                 path(d="M1 8.09961L8.1 15.0996" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round")
                 path(d="M1 8.1L8.1 1" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round")
             h1.backtitle__text Депозит
-            a(href="#").backtitle__cross 
+            a(href="home.html").backtitle__cross 
           //	/backtitle
 
           .deposit__title 27 580₽
@@ -40,7 +40,7 @@ block content
             .deposit__blackcard-title Мы добавим
             .deposit__blackcard-price 193₽
             .deposit__blackcard-text Помните, к каждому поплнению мы добавляем от себя 10%
-            a(href="#").deposit__blackcard-btn Пополнить депозит
+            a(href="bankcard.html").deposit__blackcard-btn Пополнить депозит
       //	/deposit
 
     include core/footer.pug
