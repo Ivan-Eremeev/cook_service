@@ -1,0 +1,83 @@
+/* bankcard */
+.bankcards { 
+  padding-top: 20px;
+  padding-bottom: 100px;
+  .backtitle {
+    margin-bottom: 58px;
+  }
+  &__cards {
+    margin-bottom: 40px;
+  }
+  &__col {
+    @include col(4);
+    @include col-sm(6);
+    @include col-xs(12);
+  }
+  &__card {
+    display: block;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.08), -1px -1px 6px rgba(255, 255, 255, 0.5), -5px -5px 20px #FFFFFF, 5px 5px 20px #D3D3D3;
+    border-radius: 13px;
+    background-color: $gray;
+    color: $text;
+    position: relative;
+    &:after {
+      content: '';
+      display: block;
+      padding-top: 54%;
+    }
+    &:hover {
+      box-shadow: 0 0 10px rgb(0 0 0 / 20%);
+      background-color: #fff;
+    }
+  }
+  &__content {
+    display: flex;
+    padding: 20px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  &__icon {
+    width: 45px;
+    margin-right: 15px;
+  }
+  &__title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 25px;
+  }
+  &__btn {
+    .btn {
+      width: 100%;
+      max-width: 320px;
+    }
+  }
+  @media (max-width: $break_sm) {
+    padding-top: 0;
+    padding-bottom: 50px;
+  }
+  @media (max-width: $break_xs) {
+    .backtitle {
+      margin-bottom: 40px;
+    }
+    &__cards {
+      margin-bottom: 30px;
+    }
+    &__card {
+      &:after {
+        content: '';
+        display: block;
+        padding-top: 0;
+        height: 70px;
+      }
+    }
+    &__btn {
+      .btn {
+        max-width: none;
+      }
+    }
+  }
+}
+/* /bankcard */

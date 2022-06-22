@@ -6,7 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="keywords" content="">
 		<meta name="description" content="">
-		<title>Навигация по страницам</title>
+		<title>Банковские карты</title>
 		<link rel="stylesheet" href="css/libs/swiper-bundle.min.css">
 		<meta name="robots" content="noindex, nofollow">
 		<link rel="stylesheet" href="css/style.css">
@@ -14,7 +14,7 @@
 	<body> 
 		<div class="page"> 
 						<!-- header-->
-						<header class="header">
+						<header class="header mobile-hide">
 							<div class="wrapper">
 								<div class="header__burger hamburger hamburger--squeeze js-drop-btn" data-drop="mobile-menu">
 									<div class="hamburger-box">
@@ -105,26 +105,47 @@
 						</header>
 						<!--	/header-->
 			<main class="content"> 
-				<!-- navpage-->
-				<div class="navpage">
+				<!-- bankcards-->
+				<div class="bankcards">
 					<div class="wrapper">
-						<h1>Навигация по страницам</h1>
-						<ul> 
-							<li> <a href="home.html">Главная</a></li>
-							<li> <a href="agreement.html">Пользовательское соглашение</a></li>
-							<li> <a href="privacy.html">Политика конфиденциальности</a></li>
-							<li> <a href="orders.html">Мои заказы</a></li>
-							<li> <a href="current-order.html">Текущий заказ</a></li>
-							<li><a href="completed-order.html">Заказ выполнен</a></li>
-							<li> <a href="cancelled-order.html">Заказ отменен</a></li>
-							<li> <a href="deposit.html">Депозит</a></li>
-							<li> <a href="bankcards.html">Банковские карты</a></li>
-							<li> <a href="bankcard.html">Одна карта</a></li>
-							<li> <a href="addresses.html">Мои адреса</a></li>
-						</ul>
+						<!-- backtitle-->
+						<div class="backtitle"><a class="backtitle__arrow" href="home.html"> 
+								<svg width="22" height="17" viewBox="0 0 22 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M1 8.09961H21" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"></path>
+									<path d="M1 8.09961L8.1 15.0996" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"></path>
+									<path d="M1 8.1L8.1 1" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"></path>
+								</svg></a>
+							<h1 class="backtitle__text">Привязанные карты</h1><a class="backtitle__cross" href="home.html"> </a>
+						</div>
+						<!--	/backtitle-->
+						<div class="bankcards__cards">
+							<div class="row gy">
+								<div class="bankcards__col"> <a class="bankcards__card" href="bankcard.html"> 
+										<div class="bankcards__content"> 
+											<div class="bankcards__icon"> 
+												<svg width="46" height="30" viewBox="0 0 46 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M31.5 0.5C28.3 0.5 25.4 1.5 23 3.3C20.6 1.5 17.7 0.5 14.5 0.5C6.5 0.5 0 7 0 15C0 23 6.5 29.5 14.5 29.5C17.7 29.5 20.6 28.5 23 26.7C25.4 28.4 28.3 29.5 31.5 29.5C39.5 29.5 46 23 46 15C46 7 39.5 0.5 31.5 0.5ZM23 22.7C21.1 20.7 20 18 20 15C20 12 21.1 9.3 23 7.3C24.9 9.3 26 12 26 15C26 18 24.9 20.7 23 22.7ZM31.5 26.5C29.2 26.5 27.1 25.8 25.3 24.7C27.6 22.1 29 18.8 29 15C29 11.2 27.6 7.9 25.3 5.3C27.1 4.2 29.2 3.5 31.5 3.5C37.8 3.5 43 8.7 43 15C43 21.3 37.8 26.5 31.5 26.5Z" fill="#212629"></path>
+												</svg>
+											</div>
+											<div class="bankcards__title">**** 3456</div>
+										</div></a></div>
+								<div class="bankcards__col"> <a class="bankcards__card" href="bankcard.html"> 
+										<div class="bankcards__content"> 
+											<div class="bankcards__icon"> 
+												<svg width="44" height="30" viewBox="0 0 44 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M6.5 0C2.9 0 0 2.9 0 6.5V23.5C0 27.1 2.9 30 6.5 30H37.5C41.1 30 44 27.1 44 23.5V6.5C44 2.9 41.1 0 37.5 0H6.5ZM6.5 3H37.5C39.5 3 41 4.5 41 6.5V23.5C41 25.5 39.5 27 37.5 27H6.5C4.5 27 3 25.5 3 23.5V6.5C3 4.5 4.5 3 6.5 3ZM26.2 9.5C23.3 9.5 21.8 10.9 21.8 12.8C21.8 16.1 25.6 15.7 25.6 17.4C25.6 17.7 25.4 18.4 23.8 18.4C22.2 18.4 21.1 17.8 21.1 17.8L20.6 20C20.6 20 21.6 20.6 23.6 20.6C25.6 20.6 28.3 19.1 28.3 16.8C28.3 14.1 24.4 13.9 24.4 12.8C24.4 12.2 24.9 11.7 26.3 11.7C27.2 11.7 28.2 12.4 28.2 12.4L28.6 10.1C28.8 10 27.4 9.5 26.2 9.5ZM16.7 9.7H13.7L11.2 17.1C11.2 17.1 11.1 16.5 11 16.1C9.6 12.9 7.2 11.7 7.2 11.7L9.4 20.2H12.5L16.7 9.7ZM17.8 9.7L16.2 20.2H19L20.7 9.7H17.8ZM32.8 9.7L28.2 20.2H31L31.6 18.7H35.1L35.4 20.2H37.9L35.8 9.7H32.8ZM4.1 9.7C4.1 9.7 9.6 11.4 10.8 15.5L9.9 10.8C9.9 10.8 9.5 9.8 8.4 9.8H4.1V9.7ZM33.9 12.7L34.7 16.7H32.4L33.9 12.7Z" fill="#212629"></path>
+												</svg>
+											</div>
+											<div class="bankcards__title">**** 8944</div>
+										</div></a></div>
+							</div>
+						</div>
+						<div class="bankcards__btn"> 
+							<div class="btn btn--black">Добавить карту</div>
+						</div>
 					</div>
 				</div>
-				<!--	/navpage-->
+				<!--	/bankcards-->
 			</main>
 			<!-- footer-->
 			<footer class="footer">

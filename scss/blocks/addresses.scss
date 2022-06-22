@@ -1,0 +1,91 @@
+/* addresses */
+.addresses { 
+  padding-top: 20px;
+  padding-bottom: 100px;
+
+  .backtitle {
+    margin-bottom: 58px;
+  }
+
+  &__cards {
+    margin-bottom: 40px;
+  }
+
+  &__col {
+    @include col(4);
+    @include col-sm(6);
+    @include col-xs(12);
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    min-height: 170px;
+    padding: 20px;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.08), -1px -1px 6px rgba(255, 255, 255, 0.5), -5px -5px 20px #FFFFFF, 5px 5px 20px #D3D3D3;
+    border-radius: 13px;
+    background-color: $gray;
+    color: $text;
+    position: relative;
+
+    &:hover {
+      box-shadow: 0 0 10px rgb(0 0 0 / 20%);
+      background-color: #fff;
+    }
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 25px;
+  }
+
+  &__text {
+    max-width: 280px;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 20px;
+    color: rgba(33, 38, 41, 0.5);
+  }
+
+  &__btn {
+    .btn {
+      width: 100%;
+      max-width: 320px;
+    }
+  }
+
+  @media (max-width: $break_sm) {
+    padding-top: 0;
+    padding-bottom: 50px;
+  }
+
+  @media (max-width: $break_xs) {
+    .backtitle {
+      margin-bottom: 40px;
+    }
+
+    &__cards {
+      margin-bottom: 30px;
+    }
+
+    &__card {
+      min-height: 110px;
+    }
+
+    &__btn {
+      .btn {
+        max-width: none;
+      }
+    }
+
+    &__text {
+      max-width: none;
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+}
+/* /addresses */

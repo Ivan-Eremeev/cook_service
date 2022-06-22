@@ -2526,30 +2526,30 @@ svg {
 }
 
 /* bankcard */
-.bankcard {
+.bankcards {
   padding-top: 20px;
   padding-bottom: 100px;
 }
-.bankcard .backtitle {
+.bankcards .backtitle {
   margin-bottom: 58px;
 }
-.bankcard__cards {
+.bankcards__cards {
   margin-bottom: 40px;
 }
-.bankcard__col {
+.bankcards__col {
   width: 33.3333333333%;
 }
 @media screen and (max-width: 768px) {
-  .bankcard__col {
+  .bankcards__col {
     width: 50%;
   }
 }
 @media screen and (max-width: 500px) {
-  .bankcard__col {
+  .bankcards__col {
     width: 100%;
   }
 }
-.bankcard__card {
+.bankcards__card {
   display: block;
   -webkit-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.08), -1px -1px 6px rgba(255, 255, 255, 0.5), -5px -5px 20px #FFFFFF, 5px 5px 20px #D3D3D3;
   box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.08), -1px -1px 6px rgba(255, 255, 255, 0.5), -5px -5px 20px #FFFFFF, 5px 5px 20px #D3D3D3;
@@ -2558,17 +2558,17 @@ svg {
   color: #212629;
   position: relative;
 }
-.bankcard__card:after {
+.bankcards__card:after {
   content: "";
   display: block;
   padding-top: 54%;
 }
-.bankcard__card:hover {
+.bankcards__card:hover {
   -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   background-color: #fff;
 }
-.bankcard__content {
+.bankcards__content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2579,14 +2579,69 @@ svg {
   left: 0;
   right: 0;
 }
-.bankcard__icon {
+.bankcards__icon {
   width: 45px;
   margin-right: 15px;
 }
-.bankcard__title {
+.bankcards__title {
   font-weight: 700;
   font-size: 20px;
   line-height: 25px;
+}
+.bankcards__btn .btn {
+  width: 100%;
+  max-width: 320px;
+}
+@media (max-width: 768px) {
+  .bankcards {
+    padding-top: 0;
+    padding-bottom: 50px;
+  }
+}
+@media (max-width: 500px) {
+  .bankcards .backtitle {
+    margin-bottom: 40px;
+  }
+  .bankcards__cards {
+    margin-bottom: 30px;
+  }
+  .bankcards__card:after {
+    content: "";
+    display: block;
+    padding-top: 0;
+    height: 70px;
+  }
+  .bankcards__btn .btn {
+    max-width: none;
+  }
+}
+
+/* /bankcard */
+/* bankcard */
+.bankcard {
+  padding-top: 20px;
+  padding-bottom: 100px;
+}
+.bankcard .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: -35px;
+}
+.bankcard .row > * {
+  padding-top: 35px;
+}
+.bankcard .row--mb35 {
+  margin-bottom: 35px;
+}
+.bankcard__col--big {
+  width: 400px;
+}
+.bankcard__col--small {
+  width: 200px;
+}
+.bankcard .backtitle {
+  margin-bottom: 60px;
 }
 .bankcard__btn .btn {
   width: 100%;
@@ -2597,19 +2652,31 @@ svg {
     padding-top: 0;
     padding-bottom: 50px;
   }
+  .bankcard__col--big {
+    width: 300px;
+  }
+  .bankcard__col--small {
+    width: 170px;
+  }
 }
 @media (max-width: 500px) {
   .bankcard .backtitle {
-    margin-bottom: 40px;
+    margin-bottom: 35px;
   }
-  .bankcard__cards {
-    margin-bottom: 30px;
+  .bankcard .row {
+    margin-left: -20px;
   }
-  .bankcard__card:after {
-    content: "";
-    display: block;
-    padding-top: 0;
-    height: 70px;
+  .bankcard .row > * {
+    padding-left: 20px;
+  }
+  .bankcard__col--big {
+    width: 100%;
+  }
+  .bankcard__col--small {
+    width: 50%;
+  }
+  .bankcard__btn {
+    margin-top: 40px;
   }
   .bankcard__btn .btn {
     max-width: none;
@@ -2617,3 +2684,143 @@ svg {
 }
 
 /* /bankcard */
+/* input */
+.input__label {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 20px;
+  color: rgba(33, 38, 41, 0.5);
+  margin-bottom: 5px;
+}
+.input__input {
+  position: relative;
+}
+.input__input input {
+  width: 100%;
+  height: 60px;
+  padding: 0 20px;
+  border: 1px solid #FFFFFF;
+  border-radius: 13px;
+  background-color: #E9E9E9;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 25px;
+}
+.input__input--icon input {
+  padding-right: 50px;
+}
+.input__input--uppercase input {
+  text-transform: uppercase;
+}
+.input__input--success input {
+  border-color: #25D366;
+}
+.input__input--error input {
+  border-color: red;
+}
+.input__icon {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  -webkit-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+}
+.input__icon svg, .input__icon img {
+  display: block;
+}
+
+/* /input */
+/* addresses */
+.addresses {
+  padding-top: 20px;
+  padding-bottom: 100px;
+}
+.addresses .backtitle {
+  margin-bottom: 58px;
+}
+.addresses__cards {
+  margin-bottom: 40px;
+}
+.addresses__col {
+  width: 33.3333333333%;
+}
+@media screen and (max-width: 768px) {
+  .addresses__col {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .addresses__col {
+    width: 100%;
+  }
+}
+.addresses__card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  height: 100%;
+  min-height: 170px;
+  padding: 20px;
+  -webkit-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.08), -1px -1px 6px rgba(255, 255, 255, 0.5), -5px -5px 20px #FFFFFF, 5px 5px 20px #D3D3D3;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.08), -1px -1px 6px rgba(255, 255, 255, 0.5), -5px -5px 20px #FFFFFF, 5px 5px 20px #D3D3D3;
+  border-radius: 13px;
+  background-color: #E9E9E9;
+  color: #212629;
+  position: relative;
+}
+.addresses__card:hover {
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+}
+.addresses__title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 25px;
+}
+.addresses__text {
+  max-width: 280px;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 20px;
+  color: rgba(33, 38, 41, 0.5);
+}
+.addresses__btn .btn {
+  width: 100%;
+  max-width: 320px;
+}
+@media (max-width: 768px) {
+  .addresses {
+    padding-top: 0;
+    padding-bottom: 50px;
+  }
+}
+@media (max-width: 500px) {
+  .addresses .backtitle {
+    margin-bottom: 40px;
+  }
+  .addresses__cards {
+    margin-bottom: 30px;
+  }
+  .addresses__card {
+    min-height: 110px;
+  }
+  .addresses__btn .btn {
+    max-width: none;
+  }
+  .addresses__text {
+    max-width: none;
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+/* /addresses */
