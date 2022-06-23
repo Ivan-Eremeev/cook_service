@@ -6,7 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="keywords" content="">
 		<meta name="description" content="">
-		<title>Навигация по страницам</title>
+		<title>Один дрес</title>
 		<link rel="stylesheet" href="css/libs/swiper-bundle.min.css">
 		<meta name="robots" content="noindex, nofollow">
 		<link rel="stylesheet" href="css/style.css">
@@ -14,7 +14,7 @@
 	<body> 
 		<div class="page"> 
 						<!-- header-->
-						<header class="header">
+						<header class="header mobile-hide">
 							<div class="wrapper">
 								<div class="header__burger hamburger hamburger--squeeze js-drop-btn" data-drop="mobile-menu">
 									<div class="hamburger-box">
@@ -105,28 +105,51 @@
 						</header>
 						<!--	/header-->
 			<main class="content"> 
-				<!-- navpage-->
-				<div class="navpage">
+				<!-- bankcard-->
+				<div class="bankcard">
 					<div class="wrapper">
-						<h1>Навигация по страницам</h1>
-						<ul> 
-							<li> <a href="home.html">Главная</a></li>
-							<li> <a href="agreement.html">Пользовательское соглашение</a></li>
-							<li> <a href="privacy.html">Политика конфиденциальности</a></li>
-							<li> <a href="orders.html">Мои заказы</a></li>
-							<li> <a href="current-order.html">Текущий заказ</a></li>
-							<li><a href="completed-order.html">Заказ выполнен</a></li>
-							<li> <a href="cancelled-order.html">Заказ отменен</a></li>
-							<li> <a href="deposit.html">Депозит</a></li>
-							<li> <a href="bankcards.html">Банковские карты</a></li>
-							<li> <a href="bankcard.html">Одна карта</a></li>
-							<li> <a href="addresses.html">Мои адреса</a></li>
-							<li><a href="address.html">Один дрес</a></li>
-							<li> <a href="information.html">Мои данные</a></li>
-						</ul>
+						<!-- backtitle-->
+						<div class="backtitle"><a class="backtitle__arrow" href="home.html"> 
+								<svg width="22" height="17" viewBox="0 0 22 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M1 8.09961H21" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"></path>
+									<path d="M1 8.09961L8.1 15.0996" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"></path>
+									<path d="M1 8.1L8.1 1" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"></path>
+								</svg></a>
+							<h1 class="backtitle__text">Мои адреса</h1><a class="backtitle__cross" href="home.html"> </a>
+						</div>
+						<!--	/backtitle-->
+						<form class="bankcard__form" action="#"> 
+							<div class="row row--nowrap">
+								<div class="bankcard__col bankcard__col--flex-grow">
+									<div class="input"> 
+										<div class="input__label">Как вас зовут</div>
+										<div class="input__input">
+											<input type="text" value="Ваня">
+										</div>
+									</div>
+								</div>
+								<div class="bankcard__col bankcard__col--medium"> 
+									<div class="input">
+										<div class="input__label">Телефон</div>
+										<div class="input__input input__input--icon">
+											<input class="js-phone-mask" type="text" value="+7 (918) 159-08-77">
+											<div class="input__icon"> 
+												<svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M11.0003 0C5.50025 0 1.00025 4.5 1.00025 10C1.00025 11.6 1.40025 13.2 2.10025 14.5L1.00025 18.4C0.700252 19.3 1.60025 20.2 2.50025 19.9L6.40025 18.8C7.80025 19.6 9.40025 20 11.0003 20C16.5003 20 21.0003 15.5 21.0003 10C21.0003 4.5 16.5003 0 11.0003 0ZM11.0003 1.5C15.7003 1.5 19.5003 5.3 19.5003 10C19.5003 14.7 15.7003 18.5 11.0003 18.5C9.50025 18.5 8.10025 18.1 6.90025 17.4C6.70025 17.3 6.50025 17.3 6.30025 17.3L2.60025 18.3L3.60025 14.6C3.70025 14.4 3.60025 14.2 3.50025 14C2.80025 12.8 2.40025 11.4 2.40025 9.9C2.50025 5.3 6.30025 1.5 11.0003 1.5ZM7.60025 5.5C7.50025 5.5 7.20025 5.6 7.00025 5.8C6.80025 6 6.10025 6.6 6.10025 7.8C6.10025 9 7.00025 10.1 7.10025 10.3C7.20025 10.5 8.80025 12.9 11.2003 13.9C13.2003 14.7 13.6003 14.5 14.1003 14.5C14.5003 14.5 15.5003 13.9 15.7003 13.4C15.9003 12.8 15.9003 12.4 15.8003 12.3C15.7003 12.2 15.6003 12.1 15.3003 12C15.1003 11.9 13.9003 11.3 13.7003 11.2C13.5003 11.1 13.3003 11.1 13.2003 11.3C13.0003 11.5 12.6003 12.1 12.4003 12.2C12.3003 12.4 12.1003 12.4 11.9003 12.3C11.7003 12.2 10.9003 11.9 10.0003 11.1C9.30025 10.5 8.80025 9.7 8.70025 9.4C8.50025 9.2 8.70025 9 8.80025 8.9C8.90025 8.8 9.00025 8.6 9.10025 8.5C9.20025 8.4 9.30025 8.3 9.30025 8.1C9.40025 7.9 9.30025 7.8 9.30025 7.7C9.30025 7.6 8.80025 6.4 8.60025 5.9C8.40025 5.5 8.20025 5.5 8.10025 5.5C7.90025 5.5 7.80025 5.5 7.60025 5.5Z" fill="#25D366"></path>
+												</svg>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="bankcard__buttons">
+								<button class="btn btn--black" type="submit">Сохранить</button>
+								<button class="bankcard__delete" type="submit">Удалить адрес</button>
+							</div>
+						</form>
 					</div>
 				</div>
-				<!--	/navpage-->
+				<!--	/bankcard-->
 			</main>
 			<!-- footer-->
 			<footer class="footer">

@@ -188,6 +188,9 @@ $(document).ready(function () {
 	if ($('.js-cardExpired-mask').length) {
 		$('.js-cardExpired-mask').inputmask("99/99");
 	}
+	if ($('.js-phone-mask')) {
+		$('.js-phone-mask').inputmask("+7(999)999-99-99");
+	}
 
 	// Смена положения блока при изменении ширины окна
 	// function(блок, куда переместить, куда вернуть)

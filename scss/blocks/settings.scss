@@ -76,6 +76,14 @@ svg {
       padding-top: 30px;
     }
   }
+  &--nowrap {
+    flex-wrap: nowrap;
+  }
+  @media (max-width: $break_xs) {
+    &--nowrap {
+      flex-wrap: wrap;
+    }
+  }
 }
 .wrapper {
   @include wrapper();
