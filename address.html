@@ -6,7 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="keywords" content="">
 		<meta name="description" content="">
-		<title>Мои адреса</title>
+		<title>Один дрес</title>
 		<link rel="stylesheet" href="css/libs/swiper-bundle.min.css">
 		<meta name="robots" content="noindex, nofollow">
 		<link rel="stylesheet" href="css/style.css">
@@ -105,8 +105,8 @@
 						</header>
 						<!--	/header-->
 			<main class="content"> 
-				<!-- addresses-->
-				<div class="addresses">
+				<!-- bankcard-->
+				<div class="bankcard">
 					<div class="wrapper">
 						<!-- backtitle-->
 						<div class="backtitle"><a class="backtitle__arrow" href="home.html"> 
@@ -118,28 +118,86 @@
 							<h1 class="backtitle__text">Мои адреса</h1><a class="backtitle__cross" href="home.html"> </a>
 						</div>
 						<!--	/backtitle-->
-						<div class="addresses__cards">
-							<div class="row gy">
-								<div class="addresses__col"> <a class="addresses__card" href="bankcard.html"> 
-										<div class="addresses__title">Дом</div>
-										<div class="addresses__text"> 
-											<p>Меркурий Сити Тауэр, кв./офис 62, этаж 25, </p>
-											<p>Для охраны 62</p>
-										</div></a></div>
-								<div class="addresses__col"> <a class="addresses__card" href="bankcard.html"> 
-										<div class="addresses__title">Работа</div>
-										<div class="addresses__text"> 
-											<p>Меркурий Сити Тауэр, кв./офис 62, этаж 25, </p>
-											<p>Для охраны 62</p>
-										</div></a></div>
+						<form class="bankcard__form" action="#"> 
+							<div class="row row--mb35">
+								<div class="bankcard__col">
+									<div class="input"> 
+										<div class="input__label">Название адреса</div>
+										<div class="input__input">
+											<input type="text" value="Дом">
+										</div>
+									</div>
+								</div>
+								<div class="bankcard__col">
+									<div class="input"> 
+										<div class="input__label">Ваша башня</div>
+										<div class="input__select"> 
+											<select name="#"> 
+												<option value="#">Меркурий Сити Тауэр</option>
+												<option value="#">Башня 2000</option>
+												<option value="#">IQ-quarter</option>
+												<option value="#">Эволюция</option>
+												<option value="#">Башня на Набережной</option>
+												<option value="#">ОКО</option>
+												<option value="#">Комплекс Федерация</option>
+												<option value="#">Северная башня</option>
+												<option value="#">Башня Евразия</option>
+												<option value="#">Город Столиц</option>
+												<option value="#">Башня Империя</option>
+											</select>
+											<div class="input__arrow"> </div>
+										</div>
+									</div>
+								</div>
+								<div class="bankcard__col bankcard__col--quarter">
+									<div class="input"> 
+										<div class="input__label">Вход</div>
+										<div class="input__input">
+											<input type="text" value="Центральный">
+										</div>
+									</div>
+								</div>
+								<div class="bankcard__col bankcard__col--quarter">
+									<div class="input"> 
+										<div class="input__label">Этаж</div>
+										<div class="input__input">
+											<input type="text" maxlength="3" value="28">
+										</div>
+									</div>
+								</div>
+								<div class="bankcard__col bankcard__col--quarter">
+									<div class="input"> 
+										<div class="input__label">Квартира, офис</div>
+										<div class="input__input">
+											<input type="text" maxlength="3" value="62">
+										</div>
+									</div>
+								</div>
+								<div class="bankcard__col bankcard__col--quarter">
+									<div class="input"> 
+										<div class="input__label">Для охраны</div>
+										<div class="input__input">
+											<input type="text" maxlength="3" value="62">
+										</div>
+									</div>
+								</div>
+								<div class="bankcard__col">
+									<div class="input"> 
+										<div class="input__label">Комментарий (если есть)</div>
+										<div class="input__textarea">
+											<textarea></textarea>
+										</div>
+									</div>
+								</div>
 							</div>
-						</div>
-						<div class="addresses__btn"> 
-							<div class="btn btn--black">Добавить карту</div>
-						</div>
+							<div class="bankcard__buttons">
+								<button class="btn btn--black" type="submit">Сохранить</button>
+								<button class="bankcard__delete" type="submit">Удалить адрес</button>
+							</div>
+						</form>
 					</div>
 				</div>
-				<!--	/addresses-->
+				<!--	/bankcard-->
 			</main>
 			<!-- footer-->
 			<footer class="footer">

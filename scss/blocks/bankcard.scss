@@ -13,11 +13,16 @@
     }
   }
   &__col {
+    @include col(12);
     &--big {
       width: 370px + $gutter;
     }
     &--small {
       width: 170px + $gutter;
+    }
+    &--quarter {
+      @include col(3);
+      @include col-md(6);
     }
   }
   .backtitle {
@@ -27,6 +32,32 @@
     .btn {
       width: 100%;
       max-width: 320px;
+    }
+  }
+  &__buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: -10px;
+    .btn {
+      width: 100%;
+      max-width: 360px;
+    }
+  }
+  &__delete {
+    margin-left: 10px;
+    font-weight: 300;
+    font-size: 17px;
+    line-height: 20px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    user-select: none;
+    background: transparent;
+    transition: 0.3s;
+    white-space: nowrap;
+    &:hover {
+      color: red;
     }
   }
   @media (max-width: $break_sm) {
@@ -42,6 +73,12 @@
     }
   }
   @media (max-width: $break_xs) {
+    padding-bottom: 0;
+    .wrapper {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
     .backtitle {
       margin-bottom: 35px;
     }
@@ -64,6 +101,21 @@
       .btn {
         max-width: none;
       }
+    }
+    &__form {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+    &__buttons {
+      flex-direction: column;
+      flex-grow: 1;
+      .btn {
+        max-width: none;
+      }
+    }
+    &__delete {
+      margin: 20px 0;
     }
   }
 }

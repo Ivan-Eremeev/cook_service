@@ -15,6 +15,7 @@
       padding: 0 20px;
       border: 1px solid #FFFFFF;
       border-radius: 13px;
+      outline: none;
       background-color: $gray;
       font-weight: 700;
       font-size: 20px;
@@ -48,6 +49,53 @@
     transform: translate(0,-50%);
     svg, img {
       display: block;
+    }
+  }
+  &__select {
+    position: relative;
+    select {
+      width: 100%;
+      height: 60px;
+      padding: 0 20px;
+      border: 1px solid #FFFFFF;
+      border-radius: 13px;
+      outline: none;
+      background-color: $gray;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 25px;
+      appearance: none;
+      cursor: pointer;
+      &::-ms-expand {
+        display: none;
+      }
+    }
+  }
+  &__arrow {
+    width: 12px;
+    height: 8px;
+    background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 1.5498L6.1 6.4498' stroke='%23212629' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round'/%3E%3Cpath d='M1.10156 1.5498L6.10156 6.4498' stroke='%23212629' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round'/%3E%3C/svg%3E%0A");
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translate(0,-50%);
+    pointer-events: none;
+  }
+  &__textarea {
+    textarea {
+      width: 100%;
+      height: 140px;
+      padding: 15px 20px;
+      border: 1px solid #FFFFFF;
+      border-radius: 13px;
+      outline: none;
+      background-color: $gray;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 25px;
+      resize: none;
     }
   }
 }

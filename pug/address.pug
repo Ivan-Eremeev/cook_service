@@ -1,0 +1,86 @@
+extends core/base.pug
+
+block title 
+  title Один дрес
+
+block content
+
+  include blocks/card.pug
+
+  .page 
+
+    include core/header.pug
+    +header('mobile-hide')
+
+    main.content 
+
+      // bankcard
+      .bankcard
+        .wrapper
+
+          // backtitle
+          .backtitle
+            a(href="home.html").backtitle__arrow 
+              svg(width="22" height="17" viewBox="0 0 22 17" fill="none" xmlns="http://www.w3.org/2000/svg")
+                path(d="M1 8.09961H21" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round")
+                path(d="M1 8.09961L8.1 15.0996" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round")
+                path(d="M1 8.1L8.1 1" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round")
+            h1.backtitle__text Мои адреса
+            a(href="home.html").backtitle__cross 
+          //	/backtitle
+
+          form(action="#").bankcard__form 
+            .row.row--mb35
+              .bankcard__col
+                .input 
+                  .input__label Название адреса
+                  .input__input
+                    input(type="text" value="Дом")
+              .bankcard__col
+                .input 
+                  .input__label Ваша башня
+                  .input__select 
+                    select(name="#") 
+                      option(value="#") Меркурий Сити Тауэр
+                      option(value="#") Башня 2000
+                      option(value="#") IQ-quarter
+                      option(value="#") Эволюция
+                      option(value="#") Башня на Набережной
+                      option(value="#") ОКО
+                      option(value="#") Комплекс Федерация
+                      option(value="#") Северная башня
+                      option(value="#") Башня Евразия
+                      option(value="#") Город Столиц
+                      option(value="#") Башня Империя
+                    .input__arrow 
+              .bankcard__col.bankcard__col--quarter
+                .input 
+                  .input__label Вход
+                  .input__input
+                    input(type="text" value="Центральный")
+              .bankcard__col.bankcard__col--quarter
+                .input 
+                  .input__label Этаж
+                  .input__input
+                    input(type="text" maxlength="3" value="28")
+              .bankcard__col.bankcard__col--quarter
+                .input 
+                  .input__label Квартира, офис
+                  .input__input
+                    input(type="text" maxlength="3" value="62")
+              .bankcard__col.bankcard__col--quarter
+                .input 
+                  .input__label Для охраны
+                  .input__input
+                    input(type="text" maxlength="3" value="62")
+              .bankcard__col
+                .input 
+                  .input__label Комментарий (если есть)
+                  .input__textarea
+                    textarea
+            .bankcard__buttons
+              button(type="submit").btn.btn--black Сохранить
+              button(type="submit").bankcard__delete Удалить адрес
+      //	/bankcard
+
+    include core/footer.pug
