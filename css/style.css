@@ -3133,6 +3133,7 @@ svg {
     left: 30px;
     right: 30px;
     bottom: 20px;
+    z-index: 3;
   }
   .cart__btn .btn {
     max-width: none;
