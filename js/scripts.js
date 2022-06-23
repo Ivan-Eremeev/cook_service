@@ -24,6 +24,12 @@ $(document).ready(function () {
     freeMode: true,
   });
 
+	const reccomendSlider = new Swiper('#reccomendSlider', {
+		slidesPerView: 'auto',
+		freeMode: true,
+		spaceBetween: 10,
+	});
+
   // Изменение количества товара (плюс минус)
   function counter(block) {
     const counter = document.querySelectorAll(block);

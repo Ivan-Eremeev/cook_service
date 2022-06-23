@@ -1,0 +1,180 @@
+extends core/base.pug
+
+block title 
+  title Корзина
+
+block content
+
+  include blocks/card.pug
+
+  .page 
+
+    include core/header.pug
+    +header('mobile-hide')
+
+    main.content 
+
+      // cart
+      .cart
+        .wrapper
+
+          // backtitle
+          .backtitle
+            a(href="home.html").backtitle__arrow 
+              svg(width="22" height="17" viewBox="0 0 22 17" fill="none" xmlns="http://www.w3.org/2000/svg")
+                path(d="M1 8.09961H21" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round")
+                path(d="M1 8.09961L8.1 15.0996" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round")
+                path(d="M1 8.1L8.1 1" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round")
+            h1.backtitle__text 5 блюд на 2 530₽
+            a(href="home.html").backtitle__cross 
+          //	/backtitle
+
+          form(action="#").cart__form 
+            .cart__item 
+              .cart__left
+                a(href="#").cart__img 
+                  img(src="img/food.png", alt="")
+                .cart__content
+                  .cart__title 
+                    a(href="#") Картофель с луком и белыми грибами
+                  .cart__text По домашнему
+              .cart__right 
+                .cart__counter 
+                  .js-counter.card__counter 
+                    .js-counter-minus.card__counter-minus 
+                      svg(width="14" height="2" viewBox="0 0 14 2" fill="none" xmlns="http://www.w3.org/2000/svg")
+                        path(d="M13.3 1.75H0.7C0.3 1.75 0 1.45 0 1.05C0 0.55 0.3 0.25 0.7 0.25H13.2C13.7 0.25 14 0.55 14 0.95C14 1.45 13.7 1.75 13.3 1.75Z")
+                    .js-counter-input.card__counter-input
+                      input(type="text" value="1" maxlength="3")
+                    .js-counter-plus.card__counter-plus 
+                      svg(width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg")
+                        path(d="M13.3 7.7998H0.7C0.3 7.7998 0 7.3998 0 6.9998C0 6.5998 0.3 6.2998 0.7 6.2998H13.2C13.7 6.2998 14 6.5998 14 6.9998C14 7.3998 13.7 7.7998 13.3 7.7998Z")
+                        path(d="M7.7998 0.7V13.2C7.7998 13.7 7.3998 14 6.9998 14C6.5998 14 6.2998 13.7 6.2998 13.3V0.7C6.2998 0.3 6.5998 0 6.9998 0C7.3998 0 7.7998 0.3 7.7998 0.7Z")
+                .cart__price 860&#8381;
+            .cart__item 
+              .cart__left
+                a(href="#").cart__img 
+                  img(src="img/food.png", alt="")
+                .cart__content
+                  .cart__title 
+                    a(href="#") Тар-тар из лососся на авокадо
+              .cart__right 
+                .cart__counter 
+                  .js-counter.card__counter 
+                    .js-counter-minus.card__counter-minus 
+                      svg(width="14" height="2" viewBox="0 0 14 2" fill="none" xmlns="http://www.w3.org/2000/svg")
+                        path(d="M13.3 1.75H0.7C0.3 1.75 0 1.45 0 1.05C0 0.55 0.3 0.25 0.7 0.25H13.2C13.7 0.25 14 0.55 14 0.95C14 1.45 13.7 1.75 13.3 1.75Z")
+                    .js-counter-input.card__counter-input
+                      input(type="text" value="1" maxlength="3")
+                    .js-counter-plus.card__counter-plus 
+                      svg(width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg")
+                        path(d="M13.3 7.7998H0.7C0.3 7.7998 0 7.3998 0 6.9998C0 6.5998 0.3 6.2998 0.7 6.2998H13.2C13.7 6.2998 14 6.5998 14 6.9998C14 7.3998 13.7 7.7998 13.3 7.7998Z")
+                        path(d="M7.7998 0.7V13.2C7.7998 13.7 7.3998 14 6.9998 14C6.5998 14 6.2998 13.7 6.2998 13.3V0.7C6.2998 0.3 6.5998 0 6.9998 0C7.3998 0 7.7998 0.3 7.7998 0.7Z")
+                .cart__price 1 780&#8381;
+            .cart__item.cart__item--person 
+              .cart__left
+                .cart__content
+                  .cart__title Персон
+              .cart__right 
+                .cart__counter 
+                  .js-counter.card__counter 
+                    .js-counter-minus.card__counter-minus 
+                      svg(width="14" height="2" viewBox="0 0 14 2" fill="none" xmlns="http://www.w3.org/2000/svg")
+                        path(d="M13.3 1.75H0.7C0.3 1.75 0 1.45 0 1.05C0 0.55 0.3 0.25 0.7 0.25H13.2C13.7 0.25 14 0.55 14 0.95C14 1.45 13.7 1.75 13.3 1.75Z")
+                    .js-counter-input.card__counter-input
+                      input(type="text" value="1" maxlength="3")
+                    .js-counter-plus.card__counter-plus 
+                      svg(width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg")
+                        path(d="M13.3 7.7998H0.7C0.3 7.7998 0 7.3998 0 6.9998C0 6.5998 0.3 6.2998 0.7 6.2998H13.2C13.7 6.2998 14 6.5998 14 6.9998C14 7.3998 13.7 7.7998 13.3 7.7998Z")
+                        path(d="M7.7998 0.7V13.2C7.7998 13.7 7.3998 14 6.9998 14C6.5998 14 6.2998 13.7 6.2998 13.3V0.7C6.2998 0.3 6.5998 0 6.9998 0C7.3998 0 7.7998 0.3 7.7998 0.7Z")
+                .cart__price персон/а
+            .cart__item.cart__item--delivery
+              .cart__left
+                .cart__content
+                  .cart__title Доставка
+              .cart__right 
+                .cart__price 0&#8381;
+            .cart__btn 
+              button(type="submit").btn.btn--black Оформить доставку за 2 530&#8381;
+      //	/cart
+
+      // reccomend
+      .reccomend
+        .wrapper 
+          .reccomend__title Рекомендуем:
+          .reccomend__slider 
+            #reccomendSlider 
+              .swiper-wrapper 
+                .swiper-slide 
+                  a(href="#").reccomend__item
+                    .reccomend__img.reccomend__img--orange 
+                      img(src="img/food.png", alt="")
+                    .reccomend__content 
+                      .reccomend__subtitle Картофель с луком и белыми грибами
+                      .reccomend__text 860₽
+                .swiper-slide 
+                  a(href="#").reccomend__item
+                    .reccomend__img.reccomend__img--blue 
+                      img(src="img/food.png", alt="")
+                    .reccomend__content 
+                      .reccomend__subtitle Картофель с луком и белыми грибами
+                      .reccomend__text 860₽
+                .swiper-slide 
+                  a(href="#").reccomend__item
+                    .reccomend__img.reccomend__img--orange 
+                      img(src="img/food.png", alt="")
+                    .reccomend__content 
+                      .reccomend__subtitle Картофель с луком и белыми грибами
+                      .reccomend__text 860₽
+                .swiper-slide 
+                  a(href="#").reccomend__item
+                    .reccomend__img.reccomend__img--blue 
+                      img(src="img/food.png", alt="")
+                    .reccomend__content 
+                      .reccomend__subtitle Картофель с луком и белыми грибами
+                      .reccomend__text 860₽
+                .swiper-slide 
+                  a(href="#").reccomend__item
+                    .reccomend__img.reccomend__img--orange 
+                      img(src="img/food.png", alt="")
+                    .reccomend__content 
+                      .reccomend__subtitle Картофель с луком и белыми грибами
+                      .reccomend__text 860₽
+                .swiper-slide 
+                  a(href="#").reccomend__item
+                    .reccomend__img.reccomend__img--blue 
+                      img(src="img/food.png", alt="")
+                    .reccomend__content 
+                      .reccomend__subtitle Картофель с луком и белыми грибами
+                      .reccomend__text 860₽
+                .swiper-slide 
+                  a(href="#").reccomend__item
+                    .reccomend__img.reccomend__img--orange 
+                      img(src="img/food.png", alt="")
+                    .reccomend__content 
+                      .reccomend__subtitle Картофель с луком и белыми грибами
+                      .reccomend__text 860₽
+                .swiper-slide 
+                  a(href="#").reccomend__item
+                    .reccomend__img.reccomend__img--blue 
+                      img(src="img/food.png", alt="")
+                    .reccomend__content 
+                      .reccomend__subtitle Картофель с луком и белыми грибами
+                      .reccomend__text 860₽
+                .swiper-slide 
+                  a(href="#").reccomend__item
+                    .reccomend__img.reccomend__img--orange 
+                      img(src="img/food.png", alt="")
+                    .reccomend__content 
+                      .reccomend__subtitle Картофель с луком и белыми грибами
+                      .reccomend__text 860₽
+                .swiper-slide 
+                  a(href="#").reccomend__item
+                    .reccomend__img.reccomend__img--blue 
+                      img(src="img/food.png", alt="")
+                    .reccomend__content 
+                      .reccomend__subtitle Картофель с луком и белыми грибами
+                      .reccomend__text 860₽
+      //	/reccomend
+
+    include core/footer.pug

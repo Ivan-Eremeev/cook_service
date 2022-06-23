@@ -1,0 +1,141 @@
+/* cart */
+.cart { 
+  padding-top: 20px;
+  margin-bottom: 80px;
+  .backtitle {
+    margin-bottom: 60px;
+  }
+  &__form {
+    
+  }
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 30px 40px;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 20px 20px 20px 5px;
+    margin-bottom: 10px;
+    &--delivery {
+      align-items: center;
+    }
+  }
+  &__left {
+    display: flex;
+  }
+  &__img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    width: 60px;
+    height: 60px;
+    margin-right: 20px;
+    background-color: #FE9102;
+    border-radius: 6px;
+    overflow: hidden;
+    img {
+      max-height: 100%;
+    }
+  }
+  &__content {
+    
+  }
+  &__title {
+    padding-right: 10px;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 37px;
+    a {
+      color: $text;
+    }
+  }
+  &__text {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 20px;
+    color: rgba(33, 38, 41, 0.5);
+  }
+  &__right {
+    display: flex;
+    align-items: center;
+  }
+  &__counter {
+    margin-right: 20px;
+  }
+  &__price {
+    width: 120px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 20px;
+    text-align: right;
+    white-space: nowrap;
+  }
+  &__btn {
+    margin-top: 30px;
+    .btn {
+      width: 100%;
+      max-width: 360px;
+    }
+  }
+  @media (max-width: $break_sm) {
+    &__item {
+      flex-wrap: wrap;
+      &--delivery {
+        .cart__left {
+          width: auto;
+          margin-bottom: 0;
+        }
+        .cart__right {
+          width: auto;
+        }
+      }
+      &--person {
+        .cart__left {
+          display: none;
+        }
+      }
+    }
+    &__left {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+    &__right {
+      width: 100%;
+      justify-content: space-between;
+    }
+    &__price {
+      width: auto;
+    }
+  }
+  @media (max-width: $break_xs) {
+    padding-top: 0;
+    margin-bottom: 10px;
+    .backtitle {
+      margin-bottom: 20px;
+    }
+    &__item {
+      min-height: 80px;
+      padding: 20px;
+    }
+    &__img {
+      margin-right: 10px;
+    }
+    &__title {
+      font-size: 18px;
+      line-height: 20px;
+    }
+    &__btn {
+      position: fixed;
+      left: 30px;
+      right: 30px;
+      bottom: 20px;
+      .btn {
+        max-width: none;
+        background-color: #fff;
+        box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.05), 15px 15px 20px rgba(0, 0, 0, 0.15);
+      }
+    }
+  }
+}
+/* /cart */

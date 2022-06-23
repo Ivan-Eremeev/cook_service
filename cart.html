@@ -6,7 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="keywords" content="">
 		<meta name="description" content="">
-		<title>Навигация по страницам</title>
+		<title>Корзина</title>
 		<link rel="stylesheet" href="css/libs/swiper-bundle.min.css">
 		<meta name="robots" content="noindex, nofollow">
 		<link rel="stylesheet" href="css/style.css">
@@ -14,7 +14,7 @@
 	<body> 
 		<div class="page"> 
 						<!-- header-->
-						<header class="header">
+						<header class="header mobile-hide">
 							<div class="wrapper">
 								<div class="header__burger hamburger hamburger--squeeze js-drop-btn" data-drop="mobile-menu">
 									<div class="hamburger-box">
@@ -105,29 +105,195 @@
 						</header>
 						<!--	/header-->
 			<main class="content"> 
-				<!-- navpage-->
-				<div class="navpage">
+				<!-- cart-->
+				<div class="cart">
 					<div class="wrapper">
-						<h1>Навигация по страницам</h1>
-						<ul> 
-							<li> <a href="home.html">Главная</a></li>
-							<li> <a href="agreement.html">Пользовательское соглашение</a></li>
-							<li> <a href="privacy.html">Политика конфиденциальности</a></li>
-							<li> <a href="orders.html">Мои заказы</a></li>
-							<li> <a href="current-order.html">Текущий заказ</a></li>
-							<li><a href="completed-order.html">Заказ выполнен</a></li>
-							<li> <a href="cancelled-order.html">Заказ отменен</a></li>
-							<li> <a href="deposit.html">Депозит</a></li>
-							<li> <a href="bankcards.html">Банковские карты</a></li>
-							<li> <a href="bankcard.html">Одна карта</a></li>
-							<li> <a href="addresses.html">Мои адреса</a></li>
-							<li><a href="address.html">Один дрес</a></li>
-							<li> <a href="information.html">Мои данные</a></li>
-							<li> <a href="cart.html">Корзина</a></li>
-						</ul>
+						<!-- backtitle-->
+						<div class="backtitle"><a class="backtitle__arrow" href="home.html"> 
+								<svg width="22" height="17" viewBox="0 0 22 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M1 8.09961H21" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"></path>
+									<path d="M1 8.09961L8.1 15.0996" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"></path>
+									<path d="M1 8.1L8.1 1" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"></path>
+								</svg></a>
+							<h1 class="backtitle__text">5 блюд на 2 530₽</h1><a class="backtitle__cross" href="home.html"> </a>
+						</div>
+						<!--	/backtitle-->
+						<form class="cart__form" action="#"> 
+							<div class="cart__item"> 
+								<div class="cart__left"><a class="cart__img" href="#"> <img src="img/food.png" alt=""></a>
+									<div class="cart__content">
+										<div class="cart__title"> <a href="#">Картофель с луком и белыми грибами</a></div>
+										<div class="cart__text">По домашнему</div>
+									</div>
+								</div>
+								<div class="cart__right"> 
+									<div class="cart__counter"> 
+										<div class="js-counter card__counter"> 
+											<div class="js-counter-minus card__counter-minus"> 
+												<svg width="14" height="2" viewBox="0 0 14 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M13.3 1.75H0.7C0.3 1.75 0 1.45 0 1.05C0 0.55 0.3 0.25 0.7 0.25H13.2C13.7 0.25 14 0.55 14 0.95C14 1.45 13.7 1.75 13.3 1.75Z"></path>
+												</svg>
+											</div>
+											<div class="js-counter-input card__counter-input">
+												<input type="text" value="1" maxlength="3">
+											</div>
+											<div class="js-counter-plus card__counter-plus"> 
+												<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M13.3 7.7998H0.7C0.3 7.7998 0 7.3998 0 6.9998C0 6.5998 0.3 6.2998 0.7 6.2998H13.2C13.7 6.2998 14 6.5998 14 6.9998C14 7.3998 13.7 7.7998 13.3 7.7998Z"></path>
+													<path d="M7.7998 0.7V13.2C7.7998 13.7 7.3998 14 6.9998 14C6.5998 14 6.2998 13.7 6.2998 13.3V0.7C6.2998 0.3 6.5998 0 6.9998 0C7.3998 0 7.7998 0.3 7.7998 0.7Z"></path>
+												</svg>
+											</div>
+										</div>
+									</div>
+									<div class="cart__price">860&#8381;</div>
+								</div>
+							</div>
+							<div class="cart__item"> 
+								<div class="cart__left"><a class="cart__img" href="#"> <img src="img/food.png" alt=""></a>
+									<div class="cart__content">
+										<div class="cart__title"> <a href="#">Тар-тар из лососся на авокадо</a></div>
+									</div>
+								</div>
+								<div class="cart__right"> 
+									<div class="cart__counter"> 
+										<div class="js-counter card__counter"> 
+											<div class="js-counter-minus card__counter-minus"> 
+												<svg width="14" height="2" viewBox="0 0 14 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M13.3 1.75H0.7C0.3 1.75 0 1.45 0 1.05C0 0.55 0.3 0.25 0.7 0.25H13.2C13.7 0.25 14 0.55 14 0.95C14 1.45 13.7 1.75 13.3 1.75Z"></path>
+												</svg>
+											</div>
+											<div class="js-counter-input card__counter-input">
+												<input type="text" value="1" maxlength="3">
+											</div>
+											<div class="js-counter-plus card__counter-plus"> 
+												<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M13.3 7.7998H0.7C0.3 7.7998 0 7.3998 0 6.9998C0 6.5998 0.3 6.2998 0.7 6.2998H13.2C13.7 6.2998 14 6.5998 14 6.9998C14 7.3998 13.7 7.7998 13.3 7.7998Z"></path>
+													<path d="M7.7998 0.7V13.2C7.7998 13.7 7.3998 14 6.9998 14C6.5998 14 6.2998 13.7 6.2998 13.3V0.7C6.2998 0.3 6.5998 0 6.9998 0C7.3998 0 7.7998 0.3 7.7998 0.7Z"></path>
+												</svg>
+											</div>
+										</div>
+									</div>
+									<div class="cart__price">1 780&#8381;</div>
+								</div>
+							</div>
+							<div class="cart__item cart__item--person"> 
+								<div class="cart__left">
+									<div class="cart__content">
+										<div class="cart__title">Персон</div>
+									</div>
+								</div>
+								<div class="cart__right"> 
+									<div class="cart__counter"> 
+										<div class="js-counter card__counter"> 
+											<div class="js-counter-minus card__counter-minus"> 
+												<svg width="14" height="2" viewBox="0 0 14 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M13.3 1.75H0.7C0.3 1.75 0 1.45 0 1.05C0 0.55 0.3 0.25 0.7 0.25H13.2C13.7 0.25 14 0.55 14 0.95C14 1.45 13.7 1.75 13.3 1.75Z"></path>
+												</svg>
+											</div>
+											<div class="js-counter-input card__counter-input">
+												<input type="text" value="1" maxlength="3">
+											</div>
+											<div class="js-counter-plus card__counter-plus"> 
+												<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M13.3 7.7998H0.7C0.3 7.7998 0 7.3998 0 6.9998C0 6.5998 0.3 6.2998 0.7 6.2998H13.2C13.7 6.2998 14 6.5998 14 6.9998C14 7.3998 13.7 7.7998 13.3 7.7998Z"></path>
+													<path d="M7.7998 0.7V13.2C7.7998 13.7 7.3998 14 6.9998 14C6.5998 14 6.2998 13.7 6.2998 13.3V0.7C6.2998 0.3 6.5998 0 6.9998 0C7.3998 0 7.7998 0.3 7.7998 0.7Z"></path>
+												</svg>
+											</div>
+										</div>
+									</div>
+									<div class="cart__price">персон/а</div>
+								</div>
+							</div>
+							<div class="cart__item cart__item--delivery">
+								<div class="cart__left">
+									<div class="cart__content">
+										<div class="cart__title">Доставка</div>
+									</div>
+								</div>
+								<div class="cart__right"> 
+									<div class="cart__price">0&#8381;</div>
+								</div>
+							</div>
+							<div class="cart__btn"> 
+								<button class="btn btn--black" type="submit">Оформить доставку за 2 530&#8381;</button>
+							</div>
+						</form>
 					</div>
 				</div>
-				<!--	/navpage-->
+				<!--	/cart-->
+				<!-- reccomend-->
+				<div class="reccomend">
+					<div class="wrapper"> 
+						<div class="reccomend__title">Рекомендуем:</div>
+						<div class="reccomend__slider"> 
+							<div id="reccomendSlider"> 
+								<div class="swiper-wrapper"> 
+									<div class="swiper-slide"> <a class="reccomend__item" href="#">
+											<div class="reccomend__img reccomend__img--orange"> <img src="img/food.png" alt=""></div>
+											<div class="reccomend__content"> 
+												<div class="reccomend__subtitle">Картофель с луком и белыми грибами</div>
+												<div class="reccomend__text">860₽</div>
+											</div></a></div>
+									<div class="swiper-slide"> <a class="reccomend__item" href="#">
+											<div class="reccomend__img reccomend__img--blue"> <img src="img/food.png" alt=""></div>
+											<div class="reccomend__content"> 
+												<div class="reccomend__subtitle">Картофель с луком и белыми грибами</div>
+												<div class="reccomend__text">860₽</div>
+											</div></a></div>
+									<div class="swiper-slide"> <a class="reccomend__item" href="#">
+											<div class="reccomend__img reccomend__img--orange"> <img src="img/food.png" alt=""></div>
+											<div class="reccomend__content"> 
+												<div class="reccomend__subtitle">Картофель с луком и белыми грибами</div>
+												<div class="reccomend__text">860₽</div>
+											</div></a></div>
+									<div class="swiper-slide"> <a class="reccomend__item" href="#">
+											<div class="reccomend__img reccomend__img--blue"> <img src="img/food.png" alt=""></div>
+											<div class="reccomend__content"> 
+												<div class="reccomend__subtitle">Картофель с луком и белыми грибами</div>
+												<div class="reccomend__text">860₽</div>
+											</div></a></div>
+									<div class="swiper-slide"> <a class="reccomend__item" href="#">
+											<div class="reccomend__img reccomend__img--orange"> <img src="img/food.png" alt=""></div>
+											<div class="reccomend__content"> 
+												<div class="reccomend__subtitle">Картофель с луком и белыми грибами</div>
+												<div class="reccomend__text">860₽</div>
+											</div></a></div>
+									<div class="swiper-slide"> <a class="reccomend__item" href="#">
+											<div class="reccomend__img reccomend__img--blue"> <img src="img/food.png" alt=""></div>
+											<div class="reccomend__content"> 
+												<div class="reccomend__subtitle">Картофель с луком и белыми грибами</div>
+												<div class="reccomend__text">860₽</div>
+											</div></a></div>
+									<div class="swiper-slide"> <a class="reccomend__item" href="#">
+											<div class="reccomend__img reccomend__img--orange"> <img src="img/food.png" alt=""></div>
+											<div class="reccomend__content"> 
+												<div class="reccomend__subtitle">Картофель с луком и белыми грибами</div>
+												<div class="reccomend__text">860₽</div>
+											</div></a></div>
+									<div class="swiper-slide"> <a class="reccomend__item" href="#">
+											<div class="reccomend__img reccomend__img--blue"> <img src="img/food.png" alt=""></div>
+											<div class="reccomend__content"> 
+												<div class="reccomend__subtitle">Картофель с луком и белыми грибами</div>
+												<div class="reccomend__text">860₽</div>
+											</div></a></div>
+									<div class="swiper-slide"> <a class="reccomend__item" href="#">
+											<div class="reccomend__img reccomend__img--orange"> <img src="img/food.png" alt=""></div>
+											<div class="reccomend__content"> 
+												<div class="reccomend__subtitle">Картофель с луком и белыми грибами</div>
+												<div class="reccomend__text">860₽</div>
+											</div></a></div>
+									<div class="swiper-slide"> <a class="reccomend__item" href="#">
+											<div class="reccomend__img reccomend__img--blue"> <img src="img/food.png" alt=""></div>
+											<div class="reccomend__content"> 
+												<div class="reccomend__subtitle">Картофель с луком и белыми грибами</div>
+												<div class="reccomend__text">860₽</div>
+											</div></a></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--	/reccomend-->
 			</main>
 			<!-- footer-->
 			<footer class="footer">
