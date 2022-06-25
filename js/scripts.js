@@ -215,4 +215,19 @@ $(document).ready(function () {
 	}
 	placeholderInTextarea();
 
+	function paySelect() {
+		var input = $('.fillorder__dropinput');
+		var text = $('.fillorder__val span');
+		var icon = $('.fillorder__val-icon');
+		input.on('change', function () {
+			var $this = $(this);
+			text.html($this.siblings('label').find('.fillorder__droptext').text());
+			icon.html($this.siblings('label').find('.fillorder__dropicon').html());
+			var id = $this.closest('.fillorder__drop').attr('id');
+			$this.closest('.fillorder__drop').removeClass('open');
+			$('[data-drop=' + id +']').removeClass('is-active');
+		})
+	}
+	paySelect();
+
 });
