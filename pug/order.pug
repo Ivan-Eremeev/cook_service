@@ -1,0 +1,79 @@
+extends core/base.pug
+
+block title 
+  title Корзина
+
+block content
+
+  include blocks/card.pug
+
+  .page 
+
+    include core/header.pug
+    +header('mobile-hide')
+
+    main.content 
+
+      // fillorder
+      .fillorder
+        .wrapper
+
+          // backtitle
+          .backtitle
+            a(href="home.html").backtitle__arrow 
+              svg(width="22" height="17" viewBox="0 0 22 17" fill="none" xmlns="http://www.w3.org/2000/svg")
+                path(d="M1 8.09961H21" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round")
+                path(d="M1 8.09961L8.1 15.0996" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round")
+                path(d="M1 8.1L8.1 1" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round")
+            h1.backtitle__text Оформление заказа
+            a(href="home.html").backtitle__cross 
+          //	/backtitle
+
+          .fillorder__tabs.js-tabs
+            ul.js-tabs-triggers.fillorder__triggers
+              li.active Дом
+              li Работа
+              li Новый адрес
+            .js-tabs-content.fillorder__content
+              div.open
+                form(action="#").fillorder__form
+                  .fillorder__container 
+                    .fillorder__items 
+                      a(href="address.html").fillorder__item 
+                        .fillorder__title Дом
+                        .fillorder__text 
+                          p Меркурий Сити Тауэр, кв./офис 62, этаж 25,
+                          p Для охраны 62
+                      .fillorder__item 
+                        .fillorder__flex 
+                          .fillorder__name 
+                            .fillorder__name-icon 
+                              svg(width="21" height="16" viewBox="0 0 21 16" fill="none" xmlns="http://www.w3.org/2000/svg")
+                                path(d="M2.8 0C1.2 0 0 1.2 0 2.8V5.8V8.8V13.3C0 14.8 1.2 16 2.8 16H17.3C18.8 16 20.1 14.8 20.1 13.2V8.8V5.8V2.8C20 1.2 18.8 0 17.3 0H2.8ZM2.8 1.5H17.3C18 1.5 18.6 2.1 18.6 2.8V3.4C18.1 3.1 17.7 3 17.3 3H2.8C2.3 3 1.9 3.1 1.5 3.3V2.8C1.5 2.1 2.1 1.5 2.8 1.5ZM2.8 4.5H17.3C18 4.5 18.6 5.1 18.6 5.8V6.4C18.1 6.1 17.7 6 17.3 6H13.1C12.3 6 11.7 6.5 11.4 7.2C11.2 7.8 10.6 8.2 10 8.2C9.4 8.2 8.8 7.8 8.6 7.2C8.3 6.5 7.7 6 6.9 6H2.8C2.3 6 1.9 6.1 1.5 6.3V5.8C1.5 5.1 2.1 4.5 2.8 4.5ZM2.8 7.5H7C7.1 7.5 7.2 7.6 7.2 7.7C7.6 8.9 8.7 9.7 10 9.7C11.3 9.7 12.4 8.8 12.8 7.7C12.8 7.6 12.9 7.5 13 7.5H17.2C17.9 7.5 18.5 8.1 18.5 8.8V13.3C18.5 14 17.9 14.6 17.2 14.6H2.8C2.1 14.6 1.5 14 1.5 13.3V8.8C1.5 8.1 2.1 7.5 2.8 7.5Z" fill="#212629")
+                            | Оплата
+                          .fillorder__val **** 3456
+                            .fillorder__val-icon 
+                              svg(width="24" height="15" viewBox="0 0 24 15" fill="none" xmlns="http://www.w3.org/2000/svg")
+                                path(d="M15.8 0C14.2 0 12.7 0.5 11.5 1.4C10.3 0.5 8.8 0 7.3 0C3.3 0 0 3.3 0 7.3C0 11.3 3.3 14.6 7.3 14.6C8.9 14.6 10.4 14.1 11.6 13.2C12.8 14.1 14.3 14.6 15.9 14.6C19.9 14.6 23.2 11.3 23.2 7.3C23.2 3.3 19.7 0 15.8 0ZM11.5 11.1C10.6 10.1 10 8.7 10 7.2C10 5.7 10.6 4.4 11.5 3.3C12.4 4.3 13 5.7 13 7.2C13 8.7 12.4 10.1 11.5 11.1ZM15.8 13C14.7 13 13.6 12.7 12.7 12.1C13.9 10.8 14.6 9.1 14.6 7.3C14.6 5.5 13.9 3.8 12.7 2.5C13.6 1.9 14.7 1.6 15.8 1.6C19 1.6 21.6 4.2 21.6 7.4C21.6 10.6 18.9 13 15.8 13Z" fill="#212629")
+                      .fillorder__item 
+                        .fillorder__flex 
+                          .fillorder__name 
+                            .fillorder__name-icon
+                              svg(width="18" height="21" viewBox="0 0 18 21" fill="none" xmlns="http://www.w3.org/2000/svg")
+                                path(d="M7.8 0C7.3 0 7 0.3 7 0.7C7 1.1 7.3 1.5 7.7 1.5H8.2V2.5C3.6 2.9 0 6.8 0 11.5C0 16.5 4 20.5 9 20.5C14 20.5 18 16.5 18 11.5C18 9.3 17.2 7.3 15.9 5.7L16.8 4.8C17.1 4.5 17.1 4 16.8 3.7C16.7 3.5 16.5 3.5 16.2 3.5C16 3.5 15.8 3.6 15.7 3.7L14.8 4.6C13.4 3.4 11.7 2.7 9.7 2.5V1.5H10.2C10.6 1.5 11 1.2 11 0.8C11 0.3 10.7 0 10.3 0H7.8ZM8.9 4C9 4 9 4 9.1 4C11.1 4 12.9 4.8 14.3 6.1L14.4 6.2C15.7 7.6 16.6 9.4 16.6 11.5C16.6 15.7 13.3 19 9.1 19C4.9 19 1.6 15.7 1.6 11.5C1.5 7.4 4.8 4.1 8.9 4ZM12.2 7.5C12 7.5 11.8 7.6 11.7 7.7L9.4 10C9.3 10 9.1 10 9 10C8.2 10 7.5 10.7 7.5 11.5C7.5 12.3 8.2 13 9 13C9.8 13 10.5 12.3 10.5 11.5C10.5 11.4 10.5 11.2 10.4 11.1L12.7 8.8C13 8.5 13 8 12.7 7.7C12.6 7.6 12.4 7.5 12.2 7.5Z" fill="#212629")
+                            | Когда
+                          .fillorder__val Как можно скорее
+                    .fillorder__comment 
+                      .fillorder__textarea.js-textarea
+                        .fillorder__textarea-label.js-textareaLabel Комментарий (если есть)
+                        textarea
+                  .fillorder__btn 
+                        button(type="submit").btn.btn--black Заказать
+              div
+                p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt assumenda quod fugit, eos dolorem ut ex inventore facere non sit.
+              div
+                p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt assumenda quod fugit, eos dolorem ut ex inventore facere non sit. Dolorum, eveniet, adipisci! Aperiam soluta, harum obcaecati earum optio libero reprehenderit, fuga. Libero odio eaque deserunt recusandae, maxime quaerat autem! Eligendi inventore laudantium odit magni nihil eos soluta quisquam, unde. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus officia, aliquam, nemo est unde nesciunt ipsam iure numquam natus error!
+          
+      //	/fillorder
+
+    include core/footer.pug

@@ -167,8 +167,8 @@ $(document).ready(function () {
 	function tabs(tabs) {
 		if (tabs.length) {
 			tabs.each(function() {
-				var trigger = $(this).find('.tabs_triggers').children(),
-						content = $(this).find('.tabs_content').children(),
+				var trigger = $(this).find('.js-tabs-triggers').children(),
+						content = $(this).find('.js-tabs-content').children(),
 						time = 300;
 				trigger.click(function () {
 					var $this = $(this),
@@ -198,22 +198,21 @@ $(document).ready(function () {
 		$('.js-phone-mask').inputmask("+7(999)999-99-99");
 	}
 
-	// Смена положения блока при изменении ширины окна
-	// function(блок, куда переместить, куда вернуть)
-	function replace(block, to, from, mediaBreak) {
-		function replaceToggle() {
-			if ($(window).width() <= mediaBreak) { // условие на ширину окна
-				block.appendTo(to); // Переместить блок
-			} else {
-				block.appendTo(from); // Вернуть блок обратно
-			}
-		}
-		replaceToggle();
-		$(window).resize(function () {
-			replaceToggle();
-		})
-
+	// Плавающий placeholder в textarea
+	function placeholderInTextarea() {
+		const textarea = $('.js-textarea').find('textarea');
+		textarea.each(function () { 
+			let $this = $(this);
+			$this.on('focus', function () {
+				$(this).siblings('.js-textareaLabel').addClass('active');
+			})
+			$this.on('blur', function () {
+				if ($(this).val() == "") {
+					$(this).siblings('.js-textareaLabel').removeClass('active');
+				}
+			})
+		});
 	}
-	replace($('#block'), $('#to'), $('#from'), breakLg);
+	placeholderInTextarea();
 
 });
