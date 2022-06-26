@@ -1,0 +1,330 @@
+extends core/base.pug
+
+block title 
+  title Главная (модалки)
+
+block content
+
+  include blocks/card.pug
+
+  .page 
+
+    include core/header.pug
+    +header
+
+    main.content 
+
+      // slider
+      .slider
+        .wrapper 
+          #sliderBanners.slider__slider
+            .swiper-wrapper 
+              .swiper-slide 
+                // banner-black
+                .banner-black
+                  .banner-black__content 
+                    .banner-black__title Доставка из ресторана в керамической <br>посуде
+                    a(href="#").banner-black__btn Сториз о сервисе
+                      svg(width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg")
+                        path(d="M10.0225 0.673828C4.52246 0.673828 0.0224609 5.17383 0.0224609 10.6738C0.0224609 16.1738 4.52246 20.6738 10.0225 20.6738C15.5225 20.6738 20.0225 16.1738 20.0225 10.6738C20.0225 5.17383 15.5225 0.673828 10.0225 0.673828ZM10.0225 2.17383C14.7225 2.17383 18.5225 5.97383 18.5225 10.6738C18.5225 15.3738 14.7225 19.1738 10.0225 19.1738C5.32246 19.1738 1.52246 15.3738 1.52246 10.6738C1.52246 5.97383 5.32246 2.17383 10.0225 2.17383ZM7.72246 6.27383C7.12246 6.27383 6.52246 6.87383 6.52246 7.47383V13.7738C6.52246 14.6738 7.52246 15.2738 8.32246 14.8738L14.3225 11.6738C15.2225 11.2738 15.2225 9.87383 14.3225 9.47383L8.32246 6.27383C8.12246 6.27383 7.92246 6.27383 7.72246 6.27383ZM8.02246 7.87383L13.2225 10.6738L8.02246 13.4738V7.87383Z" fill="#FE9102")
+                  .banner-black__img 
+                    img(src="img/plate.png", alt="")
+                //	/banner-black
+              .swiper-slide 
+                // banner-orange
+                .banner-orange
+                  .banner-orange__content 
+                    .banner-orange__title Доставка из ресторана в керамической <br>посуде
+                  .banner-orange__img 
+                    img(src="img/plate.png", alt="")
+                //	/banner-black
+              .swiper-slide 
+                // banner-white
+                .banner-white
+                  .banner-white__content 
+                    .banner-white__title Только башни
+                      span Москва-Сити
+                    .banner-white__text 
+                      p Наш ресторан обслуживает только близких соседей. 
+                      p Так никакого ожидания, все горячее и свежее.
+                  .banner-white__img 
+                    img(src="img/moskow-city.svg", alt="")
+                //	/banner-black
+            .slider__pagination.swiper-pagination 
+      //	/slider
+
+      // filter
+      .filter#menu 
+        .filter__links
+          .wrapper
+            span.filter__link.active Частным клиентам
+            a(href="#").filter__link Корпоративные заказы
+        .filter__categories
+          .filter__categories-stick
+            .wrapper
+              .filter__slider#filterSlider
+                .swiper-wrapper 
+                  .swiper-slide
+                    a(href="#favourite").filter__category Любимое
+                  .swiper-slide
+                    a(href="#snacks").filter__category Закуски
+                  .swiper-slide
+                    a(href="#salads").filter__category Салаты
+                  .swiper-slide
+                    a(href="#hotter").filter__category Горячее
+                  .swiper-slide
+                    a(href="#sushi").filter__category Суши и роллы
+                  .swiper-slide
+                    a(href="#soups").filter__category Супы
+                  .swiper-slide
+                    a(href="#baby").filter__category Детское
+                  .swiper-slide
+                    a(href="#desserts").filter__category Десерты
+                  .swiper-slide
+                    a(href="#drinks").filter__category Напитки
+      //	/filter
+
+      // catalog
+      .catalog#snacks
+        .wrapper 
+          .catalog__title Закуски
+          .row.gy
+            .catalog__col 
+              +card('pepper')
+            .catalog__col 
+              +card
+            .catalog__col 
+              +card
+            .catalog__col 
+              +card
+            .catalog__col 
+              +card
+            .catalog__col 
+              +card('pepper')
+      //	/catalog
+
+      // catalog
+      .catalog#salads
+        .wrapper 
+          .catalog__title Салаты
+          .row.gy
+            .catalog__col 
+              +card('pepper')
+            .catalog__col 
+              +card
+            .catalog__col 
+              +card
+            .catalog__col 
+              +card
+            .catalog__col 
+              +card
+            .catalog__col 
+              +card('pepper')
+      //	/catalog
+
+      // catalog
+      .catalog#hotter
+        .wrapper 
+          .catalog__title Горячее
+          .row.gy
+            .catalog__col 
+              +card('pepper')
+            .catalog__col 
+              +card
+            .catalog__col 
+              +card
+            .catalog__col 
+              +card
+            .catalog__col 
+              +card
+            .catalog__col 
+              +card('pepper')
+      //	/catalog
+
+      // catalog
+      .catalog#sushi
+        .wrapper 
+          .catalog__title Суши и роллы
+          .row.gy
+            .catalog__col 
+              +card('pepper')
+            .catalog__col 
+              +card
+            .catalog__col 
+              +card
+            .catalog__col 
+              +card
+            .catalog__col 
+              +card
+            .catalog__col 
+              +card('pepper')
+      //	/catalog
+
+      // catalog
+      .catalog#soups
+        .wrapper 
+          .catalog__title Супы
+          .row.gy
+            .catalog__col 
+              +card('pepper')
+            .catalog__col 
+              +card
+            .catalog__col 
+              +card
+            .catalog__col 
+              +card
+            .catalog__col 
+              +card
+            .catalog__col 
+              +card('pepper')
+      //	/catalog
+
+      // catalog
+      .catalog#baby
+        .wrapper 
+          .catalog__title Детское
+          .row.gy
+            .catalog__col 
+              +card('pepper')
+            .catalog__col 
+              +card
+            .catalog__col 
+              +card
+            .catalog__col 
+              +card
+            .catalog__col 
+              +card
+            .catalog__col 
+              +card('pepper')
+      //	/catalog
+
+      // catalog
+      .catalog#desserts
+        .wrapper 
+          .catalog__title Десерты
+          .row.gy
+            .catalog__col 
+              +card('pepper')
+            .catalog__col 
+              +card
+            .catalog__col 
+              +card
+            .catalog__col 
+              +card
+            .catalog__col 
+              +card
+            .catalog__col 
+              +card('pepper')
+      //	/catalog
+
+      // catalog
+      .catalog#drinks
+        .wrapper 
+          .catalog__title Напитки
+          .row.gy
+            .catalog__col 
+              +card('pepper')
+            .catalog__col 
+              +card
+            .catalog__col 
+              +card
+            .catalog__col 
+              +card
+            .catalog__col 
+              +card
+            .catalog__col 
+              +card('pepper')
+      //	/catalog
+
+      .modals
+        .wrapper
+          .modals__btn
+            .btn.btn--black.modal-trigger(data-modal="#modalPhone") Ввод телефона
+            .btn.btn--black.modal-trigger(data-modal="#modalConfirm") Подтвердить телефон
+            .btn.btn--black.modal-trigger(data-modal="#modalCode") Ввести код
+            .btn.btn--black.modal-trigger(data-modal="#modalCodeAgain") Получить новый код
+
+    include core/footer.pug
+
+  // modal
+  .js-modal.modal#modalPhone
+    .modal_body
+      .modal_content
+        .modal__title Ваш <br>телефон
+        form(action="#").modal__form
+          .modal__input 
+            .input 
+              .input__input 
+                input(type="text" placeholder="+7").js-phone-mask
+          .modal__text Мы сохраним ваш номер <br>телефона в тайне
+        .modal__ps Вводя номер телефона, вы автоматически принимаете условия 
+          a(href="#") Пользовательского соглашения 
+          | и соглашаетесь с нашей 
+          a(href="#") Политикой конфиденциальности
+        .modal_close.js-modal-close
+        .modal__arrow.js-modal-close
+          svg(width="22" height="17" viewBox="0 0 22 17" fill="none" xmlns="http://www.w3.org/2000/svg")
+            path(d="M1 8.09998H21" stroke="#212629" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round")
+            path(d="M1 8.09998L8.1 15.1" stroke="#212629" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round")
+            path(d="M1 8.1L8.1 1" stroke="#212629" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round")
+  // /modal
+
+  // modal
+  .js-modal.modal#modalConfirm
+    .modal_body
+      .modal_content
+        .modal__title Ваш <br>телефон
+        form(action="#").modal__form
+          .modal__input 
+            .input 
+              .input__input 
+                input(type="text" placeholder="+7").js-phone-mask
+          .modal__buttons 
+            button(type="submit").btn.btn--black Подтвердить по СМС
+            a(href="#").btn.btn--green или в WhatsApp
+        .modal_close.js-modal-close
+        .modal__arrow.js-modal-close
+          svg(width="22" height="17" viewBox="0 0 22 17" fill="none" xmlns="http://www.w3.org/2000/svg")
+            path(d="M1 8.09998H21" stroke="#212629" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round")
+            path(d="M1 8.09998L8.1 15.1" stroke="#212629" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round")
+            path(d="M1 8.1L8.1 1" stroke="#212629" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round")
+  // /modal
+
+  // modal
+  .js-modal.modal#modalCode
+    .modal_body
+      .modal_content
+        .modal__title Введите <br>код из SMS
+        form(action="#").modal__form
+          .modal__input 
+            .input 
+              .input__input 
+                input(type="text").js-phone-code
+          .modal__text Повторно получить код можно <br>через 0:12
+        .modal_close.js-modal-close
+        .modal__arrow.js-modal-close
+          svg(width="22" height="17" viewBox="0 0 22 17" fill="none" xmlns="http://www.w3.org/2000/svg")
+            path(d="M1 8.09998H21" stroke="#212629" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round")
+            path(d="M1 8.09998L8.1 15.1" stroke="#212629" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round")
+            path(d="M1 8.1L8.1 1" stroke="#212629" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round")
+  // /modal
+
+  // modal
+  .js-modal.modal#modalCodeAgain
+    .modal_body
+      .modal_content
+        .modal__title Введите <br>код из SMS
+        form(action="#").modal__form
+          .modal__input 
+            .input 
+              .input__input 
+                input(type="text").js-phone-code
+          .modal__buttons 
+            button(type="submit").btn.btn--black Получить новый код
+        .modal_close.js-modal-close
+        .modal__arrow.js-modal-close
+          svg(width="22" height="17" viewBox="0 0 22 17" fill="none" xmlns="http://www.w3.org/2000/svg")
+            path(d="M1 8.09998H21" stroke="#212629" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round")
+            path(d="M1 8.09998L8.1 15.1" stroke="#212629" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round")
+            path(d="M1 8.1L8.1 1" stroke="#212629" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round")
+  // /modal

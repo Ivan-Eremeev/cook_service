@@ -99,6 +99,10 @@ svg {
   min-height: 100%;
   display: flex;
   flex-direction: column;
+  &.blur {
+    filter: blur(20px);
+    overflow: hidden;
+  }
 }
 .content {
   flex-grow: 1;
@@ -132,6 +136,25 @@ svg {
     right: 30px;
     .btn {
       width: 100%;
+    }
+  }
+}
+.modals {
+  margin-bottom: 100px;
+  &__btn {
+    margin-left: -10px;
+    .btn {
+      margin-left: 10px;
+      margin-bottom: 10px;
+    }
+  }
+  @media (max-width: $break_xs) {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    &__btn {
+      .btn {
+        width: 100%;
+      }
     }
   }
 }

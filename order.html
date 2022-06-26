@@ -146,8 +146,8 @@
 													</div></a></div>
 										</div>
 									</div>
-									<div class="fillorder__item js-drop-btn" data-drop="payDrop">
-										<div class="fillorder__item-container">
+									<div class="fillorder__item">
+										<div class="fillorder__item-container js-drop-btn" data-drop="payDrop">
 											<div class="fillorder__flex"> 
 												<div class="fillorder__name"> 
 													<div class="fillorder__name-icon"> 
@@ -167,6 +167,7 @@
 											</div>
 										</div>
 										<div class="fillorder__drop" id="payDrop">
+											<div class="fillorder__close js-drop-close" data-drop="payDrop"></div>
 											<div class="fillorder__droplist"> 
 												<div class="fillorder__dropitem"> 
 													<input class="fillorder__dropinput" id="payDeposit" type="radio" name="pay">
@@ -214,7 +215,7 @@
 										</div>
 									</div>
 									<div class="fillorder__item">
-										<div class="fillorder__item-container">
+										<div class="fillorder__item-container js-drop-btn" data-drop="timeDrop">
 											<div class="fillorder__flex"> 
 												<div class="fillorder__name"> 
 													<div class="fillorder__name-icon">
@@ -225,6 +226,12 @@
 													<div class="fillorder__name-text">Когда</div>
 												</div>
 												<div class="fillorder__val">Как можно скорее</div>
+											</div>
+										</div>
+										<div class="fillorder__drop" id="timeDrop">
+											<div class="fillorder__close js-drop-close" data-drop="payDrop"></div>
+											<div class="fillorder__dark-block"> 
+												<div class="fillorder__"></div>
 											</div>
 										</div>
 									</div>

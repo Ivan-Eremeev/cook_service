@@ -1,0 +1,147 @@
+.modal {
+	background-color: rgba(233,233,233,.1);
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 20;
+	opacity: 0;
+	visibility: hidden;
+	transition: 0.3s;
+	&_body {
+		width: 100%;
+		height: 100%;
+		padding: 20px;
+		overflow-y: auto;
+	}
+	&_content {
+		display: flex;
+		flex-direction: column;
+		max-width: 400px;
+		min-height: 680px;
+		margin-left: auto;
+		margin-right: auto;
+		padding: 90px 20px 20px;
+		position: relative;
+		background-color: $gray;
+		box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.05), 60px 60px 80px rgba(0, 0, 0, 0.35);
+		border-radius: 40px 40px 40px 5px;
+		opacity: 0;
+		transform: translate(0,20px);
+		transition: 0.3s;
+	}
+	&_close {
+		width: 24px;
+		height: 24px;
+		background-color: $text;
+		border-radius: 100%;
+		position: absolute;
+		top: 20px;
+		right: 20px;
+		cursor: pointer;
+		user-select: none;
+		&:after,&:before {
+			content: '';
+			display: block;
+			width: 55%;
+			height: 2px;
+			background-color: #fff;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+		}
+		&:after {
+			transform: translate(-50%,-50%) rotate(45deg);
+		}
+		&:before {
+			transform: translate(-50%,-50%) rotate(-45deg);
+		}
+	}
+	&__title {
+		font-weight: 700;
+		font-size: 40px;
+		line-height: 50px;
+		margin-bottom: 20px;
+	}
+	&__form {
+		flex-grow: 1;	
+	}
+	&__input {
+		margin-bottom: 20px;
+	}
+	&__text {
+		font-weight: 300;
+		font-size: 18px;
+		line-height: 20px;
+	}
+	&__ps {
+		font-weight: 300;
+		font-size: 14px;
+		line-height: 20px;
+		color: rgba(33, 38, 41, 0.5);
+		a {
+			color: $text;
+		}
+	}
+	&__arrow {
+		display: none;
+	}
+	&__buttons {
+		margin-top: 30px;
+		.btn {
+			width: 100%;
+			margin-bottom: 20px;
+		}
+	}
+	&.open {
+		opacity: 1;
+		visibility: visible;
+		.modal_content {
+			opacity: 1;
+			transform: translate(0,0);
+		}
+	}
+	@media (max-width: $break_xs) {
+		width: 100%;
+		right: auto;
+		left: -600px;
+		opacity: 1;
+		visibility: visible;
+		&_body {
+			padding: 0;
+		}
+		&_content {
+			width: 100%;
+			height: 100%;
+			max-width: none;
+			min-height: 0;
+			border-radius: 0;
+			transform: translate(0, 0);
+			opacity: 1;
+		}
+		&__title {
+			margin-bottom: 10px;
+		}
+		&__input {
+			.input {
+				&__input {
+					input {
+						height: 70px;
+					}
+				}
+			}
+		}
+		&__arrow {
+			display: block;
+			position: absolute;
+			top: 30px;
+			left: 20px;
+		}
+		&.open {
+			left: 0;
+			.modal_content {
+			}
+		}
+	}
+}

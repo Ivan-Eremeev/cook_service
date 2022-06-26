@@ -197,6 +197,10 @@ $(document).ready(function () {
 	if ($('.js-phone-mask')) {
 		$('.js-phone-mask').inputmask("+7(999)999-99-99");
 	}
+	if ($('.js-phone-code')) {
+		$('.js-phone-code').inputmask("9 9 9 9");
+	}
+
 
 	// Плавающий placeholder в textarea
 	function placeholderInTextarea() {
@@ -229,5 +233,42 @@ $(document).ready(function () {
 		})
 	}
 	paySelect();
+
+	// Модальное окно
+	function modal(modal) {
+		$('.modal-trigger').on('click', function() {
+			var $this = $(this),
+					data = $this.data('modal'),
+					thisModal = $(data);
+			modalShow(thisModal);
+		});
+	};
+	// Открытие модального окна
+	function modalShow(thisModal) {
+		var modalClose = thisModal.find('.js-modal-close'),
+				modalBody = thisModal.find('.modal_body'),
+				page = $('.page'),
+				body = $('body');
+		thisModal.addClass('open');
+		body.addClass('lock');
+		page.addClass('blur');
+		modalClose.on('click', function() {
+			modalHide(thisModal);
+		});
+		modalBody.on('click', function(e) {
+			if ($(this).has(e.target).length === 0) {
+				modalHide(thisModal);
+			}
+		});
+	};
+	// Закрытие модального окна
+	function modalHide(thisModal) {
+		var page = $('.page'),
+				body = $('body');
+		thisModal.removeClass('open');
+		body.removeClass('lock');
+		page.removeClass('blur');
+	};
+	modal($('.js-modal'));
 
 });
