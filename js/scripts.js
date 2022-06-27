@@ -244,11 +244,17 @@ $(document).ready(function () {
 
 	// Модальное окно
 	function modal(modal) {
-		$('.modal-trigger').on('click', function() {
+		$('.modal-trigger').on('click', function(e) {
 			var $this = $(this),
 					data = $this.data('modal'),
-					thisModal = $(data);
-			modalShow(thisModal);
+					thisModal = $(data),
+					exception = $('.js-exception');
+			if (!exception.is(e.target)
+				&& exception.has(e.target).length === 0) {
+					modalShow(thisModal);
+				}else {
+					return false;
+				}
 		});
 	};
 	// Открытие модального окна
