@@ -2,13 +2,29 @@
 .product { 
   &__body {
     padding: 20px;
+    overflow: visible;
   }
   &__content {
     max-width: 770px;
-    height: auto;
+    height: 100%;
+    min-height: 0;
     border-radius: 40px 40px 40px 5px;
+    overflow: hidden;
     padding: 0;
     background: transparent;
+  }
+  &__container {
+    height: 100%;
+    border-radius: 40px 40px 40px 5px;
+    overflow-y: auto;
+    overflow: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    position: relative;
+    &::-webkit-scrollbar {
+      width: 0;
+      height: 0;
+    }
   }
   &__img {
     display: flex;
@@ -20,7 +36,7 @@
     position: relative;
   }
   &__word {
-    padding: 60px;
+    padding: 60px 60px 100px;
     border-radius: 0 0 40px 5px;
     background-color: $text;
     color: #fff;
@@ -131,10 +147,17 @@
   }
   &__bottom {
     display: flex;
-    margin-top: 40px;
+    width: 100%;
+    padding: 20px 60px;
+    background-color: $text;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
   }
   &__counter {
     .card__counter {
+      background-color: $text;
       border: 1px solid rgba(255, 255, 255, 0.08);
     }
     .card__counter-minus {
@@ -209,7 +232,7 @@
   }
   @media (max-width: $break_xs) {
     &__word {
-      padding: 20px;
+      padding: 20px 20px 100px;
     }
     &__title {
       font-size: 20px;
@@ -236,6 +259,9 @@
     }
     &__pepper {
       left: 20px;
+    }
+    &__bottom {
+      padding: 20px;
     }
   }
   @media (max-width: 370px) {

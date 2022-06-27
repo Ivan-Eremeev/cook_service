@@ -1,42 +1,97 @@
 $(document).ready(function () {
   
   // Swiper
-  const sliderBanners = new Swiper('#sliderBanners', {
-    slidesPerView: 1.16,
-    speed: 1000,
-    autoplay: {
-      delay: 3000,
-    },
-    pagination: {
-      el: '.slider__pagination',
-      clickable: true,
-    },
-    breakpoints: {
-      1200: {
-        slidesPerView: 1,
-        spaceBetween: 40
-      }
-    }
-  });
+	if ($('#sliderBanners').length) {
+		const sliderBanners = new Swiper('#sliderBanners', {
+			slidesPerView: 1.16,
+			speed: 1000,
+			autoplay: {
+				delay: 3000,
+			},
+			pagination: {
+				el: '.slider__pagination',
+				clickable: true,
+			},
+			breakpoints: {
+				1200: {
+					slidesPerView: 1,
+					spaceBetween: 40
+				}
+			}
+		});
+	}
 
-  const filterSlider = new Swiper('#filterSlider', {
-    slidesPerView: 'auto',
-    freeMode: true,
-  });
+	if ($('#filterSlider').length) {
+		const filterSlider = new Swiper('#filterSlider', {
+			slidesPerView: 'auto',
+			freeMode: true,
+		});	
 
-	const sliderDate = new Swiper('#sliderDate', {
-		direction: "vertical",
-		slidesPerView: 5,
-		watchSlidesProgress: true,
-		mousewheel: true,
-	});
+		// Делает активным пункт меню при скролле до блока
+		function menuItemActive(menu) {
+			var lastId,
+				topMenu = menu,
+				topMenuHeight = topMenu.outerHeight(),
+				menuItems = topMenu.find("a"),
+				scrollItems = menuItems.map(function () {
+					var item = $($(this).attr("href"));
+					if (item.length) { return item; }
+				});
+			menuItems.click(function (e) {
+				var href = $(this).attr("href"),
+					offsetTop = href === "#" ? 0 : $(href).offset().top - topMenuHeight - 100;
+				$('html, body').stop().animate({
+					scrollTop: offsetTop
+				}, 300);
+				e.preventDefault();
+			});
+			$(window).scroll(function () {
+				var fromTop = $(this).scrollTop() + topMenuHeight;
+				var cur = scrollItems.map(function () {
+					if ($(this).offset().top < fromTop + 101)
+						return this;
+				});
+				var index = cur.length;
+				cur = cur[cur.length - 1];
+				var id = cur && cur.length ? cur[0].id : "";
+				if (lastId !== id) {
+					lastId = id;
+					menuItems
+						.removeClass("active")
+						.filter("[href='#" + id + "']").addClass("active");
+					filterSlider.slideTo(index);
+				}
+			});
+		};
+		menuItemActive($('#filterSlider'));
+		
+	}
 
-	const sliderTime = new Swiper('#sliderTime', {
-		direction: "vertical",
-		slidesPerView: 5,
-		watchSlidesProgress: true,
-		mousewheel: true,
-	});
+	if ($('#reccomendSlider').length) {
+		const reccomendSlider = new Swiper('#reccomendSlider', {
+			slidesPerView: 'auto',
+			freeMode: true,
+			spaceBetween: 10,
+		});
+	}
+
+	if ($('#sliderDate').length) {
+		const sliderDate = new Swiper('#sliderDate', {
+			direction: "vertical",
+			slidesPerView: 5,
+			watchSlidesProgress: true,
+			mousewheel: true,
+		});
+	}
+
+	if ($('#sliderTime').length) {
+		const sliderTime = new Swiper('#sliderTime', {
+			direction: "vertical",
+			slidesPerView: 5,
+			watchSlidesProgress: true,
+			mousewheel: true,
+		});
+	}
 
   // Изменение количества товара (плюс минус)
   function counter(block) {
@@ -103,44 +158,6 @@ $(document).ready(function () {
 		}
 	}
 	clickToggle($('.js-click'));
-
-  // Делает активным пункт меню при скролле до блока
-	function menuItemActive(menu) {
-		var lastId,
-		topMenu = menu,
-		topMenuHeight = topMenu.outerHeight(),
-		menuItems = topMenu.find("a"),
-		scrollItems = menuItems.map(function(){
-			var item = $($(this).attr("href"));
-			if (item.length) { return item; }
-		});
-		menuItems.click(function(e){
-			var href = $(this).attr("href"),
-					offsetTop = href === "#" ? 0 : $(href).offset().top-topMenuHeight-100;
-			$('html, body').stop().animate({ 
-					scrollTop: offsetTop
-			}, 300);
-			e.preventDefault();
-		});
-		$(window).scroll(function(){
-			var fromTop = $(this).scrollTop()+topMenuHeight;
-			var cur = scrollItems.map(function(){
-				if ($(this).offset().top < fromTop+101)
-					return this;
-			});
-      var index = cur.length;
-			cur = cur[cur.length-1];
-			var id = cur && cur.length ? cur[0].id : "";
-			if (lastId !== id) {
-					lastId = id;
-					menuItems
-						.removeClass("active")
-						.filter("[href='#"+id+"']").addClass("active");
-        filterSlider.slideTo(index);
-			}                   
-		});
-	};
-  menuItemActive($('#filterSlider'));
 
   // Выпадайки при клике по кнопке
 	// Задать блокам выпадайкам айдишник совпадающий с data-drop="" в кнопке для этого блока
@@ -298,5 +315,21 @@ $(document).ready(function () {
 		});
 	}
 	dateSliderShow();
+
+	function textaraAutoheight() {
+		$("textarea").each(function () {
+			var textarea = $(this);
+			this.setAttribute("style", "height:" + (this.scrollHeight) + "px;overflow-y:hidden;");
+			var scrollHeight = this.scrollHeight;
+			textarea.on("input", function () {
+				console.log(scrollHeight);
+				if (this.scrollHeight > scrollHeight) {
+					this.style.height = "auto";
+					this.style.height = (this.scrollHeight) + "px";
+				}
+			});
+		});
+	}
+	textaraAutoheight();
 
 });
