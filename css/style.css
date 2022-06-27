@@ -4086,7 +4086,7 @@ svg {
   -ms-user-select: none;
   user-select: none;
 }
-.product__label > div {
+.product__label > span {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4095,12 +4095,14 @@ svg {
   align-items: center;
 }
 .product__radio {
+  display: block;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
   width: 26px;
   height: 26px;
   margin-left: 10px;
   border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 100%;
-  -ms-flex-negative: 0;
   flex-shrink: 0;
   position: relative;
 }

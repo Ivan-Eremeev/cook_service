@@ -99,12 +99,14 @@
     line-height: 20px;
     cursor: pointer;
     user-select: none;
-    > div {
+    > span {
       display: flex;
       align-items: center;
     }
   }
   &__radio {
+    display: block;
+    flex-shrink: 0;
     width: 26px;
     height: 26px;
     margin-left: 10px;
