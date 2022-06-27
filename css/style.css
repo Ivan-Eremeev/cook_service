@@ -3433,7 +3433,7 @@ svg {
   -ms-flex-positive: 1;
   flex-grow: 1;
   margin-left: 30px;
-  padding-top: 80px;
+  padding-top: 100px;
 }
 .fillorder__textarea {
   position: relative;
@@ -3686,6 +3686,9 @@ svg {
   font-size: 18px;
   line-height: 20px;
 }
+.fillorder__choose {
+  display: none;
+}
 @media (min-width: 769px) {
   .fillorder__triggers li:hover:not(.active) {
     background-color: #fff;
@@ -3805,10 +3808,25 @@ svg {
   .fillorder__btn {
     max-width: none;
   }
+  .fillorder__choose {
+    display: block;
+    background: #212629;
+    -webkit-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5), -1px -1px 6px rgba(255, 255, 255, 0.05), -5px -5px 20px rgba(255, 255, 255, 0.1), 5px 5px 20px rgba(0, 0, 0, 0.8);
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5), -1px -1px 6px rgba(255, 255, 255, 0.05), -5px -5px 20px rgba(255, 255, 255, 0.1), 5px 5px 20px rgba(0, 0, 0, 0.8);
+    color: #FE9102;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+  }
 }
 @media (max-width: 370px) {
   .fillorder__name-text {
     display: none;
+  }
+  .fillorder__slide-item {
+    font-size: 16px;
   }
 }
 

@@ -131,7 +131,7 @@
   &__comment {
     flex-grow: 1;
     margin-left: 30px;
-    padding-top: 80px;
+    padding-top: 100px;
   }
   &__textarea {
     position: relative;
@@ -344,6 +344,9 @@
     font-size: 18px;
     line-height: 20px;
   }
+  &__choose {
+    display: none;
+  }
   @media (min-width: $break_sm + 1) {
     &__triggers {
       li {
@@ -462,10 +465,24 @@
     &__btn {
       max-width: none;
     }
+    &__choose {
+      display: block;
+      background: #212629;
+      box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5), -1px -1px 6px rgba(255, 255, 255, 0.05), -5px -5px 20px rgba(255, 255, 255, 0.1), 5px 5px 20px rgba(0, 0, 0, 0.8);
+      color: $orange;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 2;
+    }
   }
   @media (max-width: 370px) {
     &__name-text {
       display: none;
+    }
+    &__slide-item {
+      font-size: 16px;
     }
   }
 }
