@@ -24,10 +24,18 @@ $(document).ready(function () {
     freeMode: true,
   });
 
-	const reccomendSlider = new Swiper('#reccomendSlider', {
-		slidesPerView: 'auto',
-		freeMode: true,
-		spaceBetween: 10,
+	const sliderDate = new Swiper('#sliderDate', {
+		direction: "vertical",
+		slidesPerView: 5,
+		watchSlidesProgress: true,
+		mousewheel: true,
+	});
+
+	const sliderTime = new Swiper('#sliderTime', {
+		direction: "vertical",
+		slidesPerView: 5,
+		watchSlidesProgress: true,
+		mousewheel: true,
 	});
 
   // Изменение количества товара (плюс минус)
@@ -270,5 +278,19 @@ $(document).ready(function () {
 		page.removeClass('blur');
 	};
 	modal($('.js-modal'));
+
+	// Появление слайдера выбора даты доставки
+	function dateSliderShow() {
+		var timeNow = $('#timeNow')
+		var timeAfter = $('#timeAfter');
+		var sliders = $('.fillorder__dark-block--slider');
+		timeAfter.on('change', function () {
+			sliders.addClass('visible');
+		});
+		timeNow.on('change', function () {
+			sliders.removeClass('visible');
+		});
+	}
+	dateSliderShow();
 
 });

@@ -3351,6 +3351,11 @@ svg {
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 .fillorder__item-container.is-active {
   -webkit-box-shadow: inset -1px -1px 3px rgba(255, 255, 255, 0.8), inset -6px -6px 5px rgba(255, 255, 255, 0.3), inset 1px 1px 3px rgba(0, 0, 0, 0.15), inset 6px 6px 5px rgba(0, 0, 0, 0.06);
@@ -3545,10 +3550,137 @@ svg {
 .fillorder__close {
   display: none;
 }
+.fillorder__dark-blocks {
+  padding: 20px 0;
+}
 .fillorder__dark-block {
   padding: 20px 17px;
   background: rgba(0, 0, 0, 0.25);
   border-radius: 30px 30px 30px 3px;
+  color: #fff;
+  margin-bottom: 10px;
+}
+.fillorder__dark-block--slider {
+  display: none;
+  position: relative;
+}
+.fillorder__dark-block--slider:after {
+  content: "";
+  display: block;
+  height: 1px;
+  background: rgba(217, 217, 217, 0.08);
+  position: absolute;
+  top: 55px;
+  left: 0;
+  right: 0;
+}
+.fillorder__dark-block--slider:before {
+  content: "";
+  display: block;
+  height: 200px;
+  background: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(90%, #212629));
+  background: -o-linear-gradient(top, transparent, #212629 90%);
+  background: linear-gradient(to bottom, transparent, #212629 90%);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  pointer-events: none;
+}
+.fillorder__dark-block--slider.visible {
+  display: block;
+}
+.fillorder__dark-block--nopadding {
+  padding: 0;
+}
+.fillorder__dark-block-input {
+  position: absolute;
+  visibility: hidden;
+}
+.fillorder__dark-block-input:checked ~ .fillorder__dark-block-label .fillorder__dark-block-radio {
+  background-color: #FE9102;
+  border-color: #FE9102;
+}
+.fillorder__dark-block-input:checked ~ .fillorder__dark-block-label .fillorder__dark-block-radio:after {
+  opacity: 1;
+}
+.fillorder__dark-block-label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 20px 17px;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 20px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.fillorder__dark-block-radio {
+  width: 26px;
+  height: 26px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 100%;
+  position: relative;
+}
+.fillorder__dark-block-radio:after {
+  content: "";
+  display: block;
+  width: 13px;
+  height: 12px;
+  background-image: url("data:image/svg+xml,%3Csvg width='13' height='12' viewBox='0 0 13 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2 7L5 10L11 2' stroke='%23212629' stroke-width='3' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  opacity: 0;
+}
+.fillorder__sliders {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  height: 180px;
+  overflow: hidden;
+}
+.fillorder__slider {
+  width: 110px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.fillorder__slider .swiper-slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.fillorder__slider .swiper-slide-active .fillorder__slide-item {
+  font-weight: bold;
+}
+.fillorder__slide-item {
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 20px;
 }
 @media (min-width: 769px) {
   .fillorder__triggers li:hover:not(.active) {
@@ -3559,7 +3691,7 @@ svg {
   .fillorder__textarea-label.active {
     visibility: hidden;
   }
-  .fillorder__item:hover:not(.is-active) .fillorder__item-container {
+  .fillorder__item-container:hover:not(.is-active) .fillorder__item-container {
     -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     background-color: #fff;
