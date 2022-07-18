@@ -297,9 +297,42 @@ svg {
     bottom: 20px;
     left: 30px;
     right: 30px;
+    z-index: 10;
   }
   .floating-button .btn {
     width: 100%;
+  }
+}
+
+.floating-cart {
+  display: none;
+}
+@media (max-width: 768px) {
+  .floating-cart {
+    display: block;
+    width: 100%;
+    max-width: 340px;
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+    z-index: 10;
+  }
+  .floating-cart .btn {
+    width: 100%;
+  }
+}
+@media (max-width: 500px) {
+  .floating-cart {
+    left: 30px;
+    right: 30px;
+    width: auto;
+    max-width: none;
+    -webkit-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    transform: translate(0, 0);
   }
 }
 
