@@ -4037,19 +4037,23 @@ svg {
   overflow: visible;
 }
 .product__content {
+  display: block;
   max-width: 770px;
-  height: 100%;
-  min-height: 0;
   border-radius: 40px 40px 40px 5px;
-  overflow: hidden;
   padding: 0;
   background: transparent;
 }
+.product__head {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
 .product__container {
-  height: 100%;
+  max-height: calc(100vh - 40px);
   border-radius: 40px 40px 40px 5px;
   overflow-y: auto;
-  overflow: auto;
   -ms-overflow-style: none;
   scrollbar-width: none;
   position: relative;
@@ -4199,11 +4203,11 @@ svg {
   display: flex;
   width: 100%;
   padding: 20px 60px;
+  border-radius: 0 0 40px 0;
   background-color: #212629;
-  position: fixed;
+  position: absolute;
   bottom: 0;
   left: 0;
-  right: 0;
 }
 .product__counter .card__counter {
   background-color: #212629;
@@ -4286,6 +4290,9 @@ svg {
   transform: scale(1.1);
 }
 @media (max-width: 500px) {
+  .product__content {
+    height: auto;
+  }
   .product__word {
     padding: 20px 20px 100px;
   }
@@ -4330,6 +4337,9 @@ svg {
   }
   .product__btn {
     margin-left: 0;
+  }
+  .product__word {
+    padding: 20px 20px 150px;
   }
 }
 

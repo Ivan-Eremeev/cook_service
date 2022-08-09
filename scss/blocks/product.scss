@@ -5,19 +5,23 @@
     overflow: visible;
   }
   &__content {
+    display: block;
     max-width: 770px;
-    height: 100%;
-    min-height: 0;
     border-radius: 40px 40px 40px 5px;
-    overflow: hidden;
     padding: 0;
     background: transparent;
   }
+  &__head {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+  }
   &__container {
-    height: 100%;
+    max-height: calc(100vh - 40px);
     border-radius: 40px 40px 40px 5px;
     overflow-y: auto;
-    overflow: auto;
     -ms-overflow-style: none;
     scrollbar-width: none;
     position: relative;
@@ -149,11 +153,11 @@
     display: flex;
     width: 100%;
     padding: 20px 60px;
+    border-radius: 0 0 40px 0;
     background-color: $text;
-    position: fixed;
+    position: absolute;
     bottom: 0;
     left: 0;
-    right: 0;
   }
   &__counter {
     .card__counter {
@@ -231,6 +235,9 @@
     }
   }
   @media (max-width: $break_xs) {
+    &__content {
+      height: auto;
+    }
     &__word {
       padding: 20px 20px 100px;
     }
@@ -279,6 +286,9 @@
     }
     &__btn {
       margin-left: 0;
+    }
+    &__word {
+      padding: 20px 20px 150px;
     }
   }
 }
