@@ -4039,6 +4039,7 @@ svg {
 .product__content {
   display: block;
   max-width: 770px;
+  min-height: 0;
   border-radius: 40px 40px 40px 5px;
   padding: 0;
   background: transparent;
